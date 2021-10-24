@@ -32,7 +32,11 @@ def getid(title,author=".*"):
 class Client(api.Client):
 	def addCard(self,title,author=".*"):
 		bookid=getid(title,author)
+		if not bookid:
+			return False
 		return super().addCard(bookid)
 	def addBM(self,title,author=".*"):
 		bookid=getid(title,author)
+		if not bookid:
+			return False
 		return super().addBM(bookid)
