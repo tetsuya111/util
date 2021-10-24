@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 import urllib.parse as up
 import sys
 import re
+import time
 
 SEARCH_URL="https://www.bookoffonline.co.jp/disp/CSfSearch.jsp"
 
@@ -73,4 +74,5 @@ def searchN(query,start=1,n=1,type_=SearchType.BOOK):
 			return
 		for data in dataa:
 			yield data
+		time.sleep(1)
 
