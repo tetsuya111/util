@@ -30,11 +30,11 @@ def getid(title,author=".*"):
 	return getidInUrl(data["url"])
 
 class Client(api.Client):
-	def addCard(self,title,author=".*"):
+	def addCart(self,title,author=".*"):
 		bookid=getid(title,author)
 		if not bookid:
 			return False
-		return super().addCard(bookid)
+		return super().addCart(bookid)
 	def addBM(self,title,author=".*"):
 		bookid=getid(title,author)
 		if not bookid:

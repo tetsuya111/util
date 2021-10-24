@@ -10,7 +10,7 @@ HOST="www.bookoffonline.co.jp"
 URL="https://"+HOST
 SEARCH_URL=URL+"/disp/CSfSearch.jsp"
 LOGIN_URL=URL+"/common/CSfLogin.jsp"
-ADD_CARD_URL=URL+"/disp/CSfAddSession_001.jsp"
+ADD_CART_URL=URL+"/disp/CSfAddSession_001.jsp"
 ADD_BM_URL=URL+"/member/BPmAddBookMark.jsp"
 
 HEADERS={ "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"}
@@ -98,12 +98,12 @@ def login(session,mail,pw):
 	return not isloginurl(res.text)
 
 
-def addCard(session,bookid):
+def addCart(session,bookid):
 	params={
 		"iscd":bookid,
 		"st":1
 	}
-	return session.get(ADD_CARD_URL,params=params)
+	return session.get(ADD_CART_URL,params=params)
 
 def addBM(session,bookid):
 	params={
@@ -126,10 +126,10 @@ class Client:
 	def login(self,mail,pw):
 		self.__logined=login(self.session,mail,pw)
 		return self.logined
-	def addCard(self,bookid):
+	def addCart(self,bookid):
 		if not self.logined:
 			return False
-		addCard(self.session,bookid)
+		addCart(self.session,bookid)
 	def addBM(self,bookid):
 		if not self.logined:
 			return False
