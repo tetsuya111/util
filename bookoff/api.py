@@ -1,4 +1,3 @@
-from myutil import site
 import requests
 from bs4 import BeautifulSoup as bs
 import urllib.parse as up
@@ -29,7 +28,7 @@ def _search(query,page=1,type_=SearchType.BOOK,session=requests):
 		"p":page,
 		"bg":type_
 	}
-	headers=site.HEADERS
+	headers={ "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"}
 	res=session.get(SEARCH_URL,headers=headers,params=params)
 	res.encoding=encoding
 	return res.text
