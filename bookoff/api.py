@@ -5,7 +5,18 @@ import sys
 import re
 import time
 
-SEARCH_URL="https://www.bookoffonline.co.jp/disp/CSfSearch.jsp"
+
+HOST="www.bookoffonline.co.jp"
+URL="https://"+HOST
+SEARCH_URL=URL+"/disp/CSfSearch.jsp"
+LOGIN_URL=URL+"/common/CSfLogin.jsp"
+ADD_CARD_URL=URL+"/disp/CSfAddSession_001.jsp"
+ADD_BM_URL=URL+"/member/BPmAddBookMark.jsp"
+
+HEADERS={ "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"}
+
+ENCODING="sjis"
+
 
 class SearchType:
 	ALL=""
@@ -20,8 +31,7 @@ class SearchType:
 
 def _search(query,page=1,type_=SearchType.BOOK,session=requests):
 	query=query
-	encoding="sjis"
-	query=query.encode(encoding)
+	query=query.encode(ENCODING)
 	params={
 		"name":"search_form",
 		"q":query,
@@ -29,14 +39,13 @@ def _search(query,page=1,type_=SearchType.BOOK,session=requests):
 		"p":page,
 		"bg":type_
 	}
-	headers={ "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"}
-	res=session.get(SEARCH_URL,headers=headers,params=params)
-	res.encoding=encoding
+	res=session.get(SEARCH_URL,headers=HEADERS,params=params)
+	res.encoding=ENCODING
 	return res.text
 
 def toData(l):
 	ttl=l.select_one(".itemttl")
-	title=ttl.text
+	title=ttl.text.strip()
 	a=ttl.find("a")
 	url=a.get("href")
 	stocked=not l.select_one(".nostockbtn")
@@ -46,7 +55,7 @@ def toData(l):
 	price=price.group()
 	price=int(price.replace(",",""))
 	author=l.select_one(".author")
-	author=author.text
+	author=author.text.strip()
 	return {
 		"title":title,
 		"url":url,
@@ -75,4 +84,54 @@ def searchN(query,start=1,n=1,type_=SearchType.BOOK):
 		for data in dataa:
 			yield data
 		time.sleep(1)
+
+def isloginurl(text):
+	return "MemberForm" in text
+
+def login(session,mail,pw):
+	params={
+		"name":"MemberForm",
+		"ID":mail,
+		"PWD":pw
+	}
+	res=session.get(LOGIN_URL,headers=HEADERS,params=params)
+	return not isloginurl(res.text)
+
+
+def addCard(session,bookid):
+	params={
+		"iscd":bookid,
+		"st":1
+	}
+	return session.get(ADD_CARD_URL,params=params)
+
+def addBM(session,bookid):
+	params={
+		"iscd":bookid,
+		"st":1
+	}
+	return session.get(ADD_BM_URL,params=params)
+
+class Client:
+	def __init__(self,mail="",pw=""):
+		self.session=requests.Session()
+		self.__logined=False
+		if mail and pw:
+			self.login(mail,pw)
+	def __getattr__(self,attr):
+		return getattr(self.session,attr)
+	@property
+	def logined(self):
+		return self.__logined
+	def login(self,mail,pw):
+		self.__logined=login(self.session,mail,pw)
+		return self.logined
+	def addCard(self,bookid):
+		if not self.logined:
+			return False
+		addCard(self.session,bookid)
+	def addBM(self,bookid):
+		if not self.logined:
+			return False
+		addBM(self.session,bookid)
 
