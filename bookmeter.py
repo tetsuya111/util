@@ -74,7 +74,7 @@ def getBooks(url,start=1,n=5):
 
 def searchUsers(name):
 	headers={
-		**HEADERS
+		**HEADERS,
 		"refer":SEARCH_USERS_URL
 	}
 	params={
