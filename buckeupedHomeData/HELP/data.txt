@@ -1,0 +1,2062 @@
+selectのコマンドSELECThome のコマンドHOME*id
+	id
+ データベースのIDを表示する。
+*csm search
+	csm search [(-t <tags>)] [(-m <memo>)]  [(-d <dname>)]
+ CSMのパスを検索する。 <tags> はタグ、<memo>はメモ、<dname> はCSMのディレクトリ。
+*csm write
+ 	csm write [(-d <dname>)]
+ カードをCSMとして<dname>に書き込む。
+ *csm append
+	csm append [(-d <dname>)]  [(-O|--override)]      
+ CSMをデータベースに追加する。<dname>はディレクトリ。 上書きするときは、-O または --override をつける。
+*clean
+	clean
+*search
+	search  [(-t <tags>)] [(-m <memo>)] [(-p <pMode>)]
+ カードを検索する。<tags>はタグですべて含まれるカードを返す。<memo>はメモで部分一致したカードを返す。<pMode>は結果の表示法で "C" はコメント、"T" はタグ、"D" は日付、"F" はファイル名を表示する。例えば、「-p "CF"」ならコメントと日付を表示する。
+*tag
+	tag tot
+	tag
+ タグを検索する。
+	write tot
+	write
+	remove tot [<tag>]remove [(-t <tags>)] [(-m <memo>)]*id
+	id
+ データベースのIDを表示する。
+*csm search
+	csm search [(-t <tags>)] [(-m <memo>)]  [(-d <dname>)]
+ CSMのパスを検索する。 <tags> はタグ、<memo>はメモ、<dname> はCSMのディレクトリ。
+*csm write
+ 	csm write [(-d <dname>)]
+ カードをCSMとして<dname>に書き込む。
+ *csm append
+	csm append [(-d <dname>)]  [(-O|--override)]      
+ CSMをデータベースに追加する。<dname>はディレクトリ。 上書きするときは、-O または --override をつける。
+*clean
+	clean
+*search
+	search  [(-t <tags>)] [(-m <memo>)] [(-p <pMode>)]
+ カードを検索する。<tags>はタグですべて含まれるカードを返す。<memo>はメモで部分一致したカードを返す。<pMode>は結果の表示法で "C" はコメント、"T" はタグ、"D" は日付、"F" はファイル名を表示する。例えば、「-p "CF"」ならコメントと日付を表示する。
+*tag
+	tag tot [<tag>]
+	tag [<tag>]
+ タグを検索する。<tag>はタグ名で部分一致したカードを返す。
+ *write
+	write tot
+	write
+ カードを書き込む。
+ *remove
+	remove tot [<tag>]
+	remove [(-t <tags>)] [(-m <memo>)]                 
+ カードを削除する。totの場合、<tag>はタグ名で、部分一致したカードを削除する。普通のカードの場合、<tags>はタグ名で<memo>はメモで、search と同じように検索し一致するカードを削除する。カードをファイルとして書き込んだもの。UNKNOWNカードをファイルとして書き込んだもの。
+-
+<Memo>
+-
+<Comment>
+-
+<Tags>
+-
+<Date>
+-
+の形式をとる。TOTタグのタグ。名前とタグ(複数)を持つ。
+-
+ファイルに書き込んだときは、CSMと同じ形式になり
+-
+<Memo> #適当
+-#
+*<Name>
+-<Tag1>
+-<Tag2>
+-<Tag3>
+-  :
+-  :
+-#
+IS_TOT,<Tags>,...
+-
+となる。*help
+	help
+ ヘルプを表示する。
+*ls
+	ls
+ データベースのIDを表示する。
+*select
+	select <dbid> [(-u <userid>)]
+ データベースを選択し、シェルを起動する。
+ 「-u <userid>」があるときは、<userid>の<dbid>を選択し、クライアントシェルを起動する。
+*server
+	server start <dbid>
+	server stop <dbid>
+ 「server start」は<dbid>をサーバーとして起動する。
+ 「server stop」は<dbid>をサーバーとして停止する。
+*append
+	append <dbid> <tags>...
+ データベースを追加する。<dbid>はデータベースのID。<tags>はタグ。
+*remove
+	remove <dbid>
+ データベースを削除する。<dbid>はデータベースのID。
+*search
+	search [(-t <tags>)] [(-u <userid>)]
+ データベースを検索する。<tags>はタグ。データベースのIDを表示する。
+ 「-u <userid>」があるときは、<userid>のデータベースを検索する。
+*tag
+	tag tot <tag>
+	tag <tag>
+ タグを検索する。<tag>はタグ名。
+*csm write
+	csm write [(-d <dname>)]
+ TOTをCSMとして書き込む。<dname>ディレクトリ名。
+*csm append
+	csm append [(-d <dname>)] [(-O|--override)]標準標準のプログラム。標準 <-> 拡張。augment_hs のコマンドAUGMENT_HSaugment_hs2 のコマンドAUGMENT_HS2*lock
+	lock [-u] <dbid>
+ データベースをロックする。<dbid>はデータベースのID。
+ 「-u」があるときは、アンロックする。select2 のコマンドSELECT2DBSHELL*csm write
+	csm write tot [<tag>] [(-d <dname>)]
+	csm write csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]
+	csm write [(-d <dname>)]
+ カードをCSMとして書き込む。*lock
+	lock [-u] <dbid>
+ データベースをロックする。<dbid>はデータベースのID。
+ 「-u」があるときは、アンロックする。
+*標準のコマンド
+ "0aG9tZSDjga7jgrPjg57jg7Pjg4k=.csm*csm write
+	csm write tot [<tag>] [(-d <dname>)]
+	csm write csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]
+	csm write [(-d <dname>)]
+ カードをCSMとして書き込む。<dname>はディレクトリ名。
+ totのとき。<tag>はタグ名で、部分一致したものを書き込む。
+ csmのとき。<tags>はタグ。<memo>はメモ。selectの検索で一致したカードを書き込む。
+ selectの検索。 "0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm:*search
+ その他のときは、標準のホームと同様に書き込む。 "0aG9tZSDjga7jgrPjg57jg7Pjg4k=.csm:*search
+*csm append
+	append tot [<tag>] [(-d <dname>)] [(-O|--override)]
+	append csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]  [(-O|--override)]
+	append [(-d <dname>)] [(-O|--override)]
+ CSMをカードとしてデータベースに追加する。上書きするときは、--override をつける。
+ 変数は csm write と同様。REFERENCE_TERMXXX*csm write
+	csm write tot [<tag>] [(-d <dname>)]
+	csm write csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]
+	csm write [(-d <dname>)]
+ カードをCSMとして書き込む。<dname>はディレクトリ名。<dname>が指定されないときは、「%KYODAISHIKI_DB_DIR%\csmFiles」をディレクトリとする。
+ totのとき。<tag>はタグ名で、部分一致したものを書き込む。
+ csmのとき。<tags>はタグ。<memo>はメモ。selectの検索で一致したカードを書き込む。
+ selectの検索。 "0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm:*search
+ その他のときは、標準のホームと同様に書き込む。 "0aG9tZSDjga7jgrPjg57jg7Pjg4k=.csm:*search
+*csm append
+	append tot [<tag>] [(-d <dname>)] [(-O|--override)]
+	append csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]  [(-O|--override)]
+	append [(-d <dname>)] [(-O|--override)]
+ CSMをカードとしてデータベースに追加する。上書きするときは、--override をつける。
+ 変数は csm write と同様。
+*csm remove
+	csm remove
+ 「%KYODAISHIKI_DB_DIR%\csmFiles」を削除する。*csm write
+	csm write tot [<tag>] [(-d <dname>)]
+	csm write csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]
+	csm write [(-d <dname>)]
+ カードをCSMとして書き込む。<dname>はディレクトリ名。<dname>が指定されないときは、「%KYODAISHIKI_DB_DIR%\csmFiles」をディレクトリとする。
+ totのとき。<tag>はタグ名で、部分一致したものを書き込む。
+ csmのとき。<tags>はタグ。<memo>はメモ。selectの検索で一致したカードを書き込む。
+ selectの検索。 "0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm:*search
+ その他のときは、標準のホームと同様に書き込む。 "0aG9tZSDjga7jgrPjg57jg7Pjg4k=.csm:*search
+*csm append
+	append tot [<tag>] [(-d <dname>)] [(-O|--override)]
+	append csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]  [(-O|--override)]
+	append [(-d <dname>)] [(-O|--override)]
+ CSMをカードとしてデータベースに追加する。上書きするときは、--override をつける。
+ 変数は csm write と同様。
+*csm remove
+	csm remove
+ 「%KYODAISHIKI_DB_DIR%\csmFiles」を削除する。
+*search
+	search  [(-t <tags>)] [(--nt <noTags>)] [(-m <memo>)] [(-c <comment>)] [(-F <from>)] [(-U <until>)] [(-u <userid>)] [(-D <dbid>)] [(-p <pMode>)] [(--pn|--printNot)] [(-r|--random)]KYODAISHIKI_LOADER_DIRローダーのディレクトリ名。環境変数。KYODAISHIKI_HOME_DIR今使ってるホームのディレクトリ名。環境変数。最近使ったデータベースのディレクトリ名。環境変数。      KYODAISHIKI_HOME_ID今使ってるホームのID。環境変数。KYODAISHIKI_DB_ID最近使ったデータベースのID。環境変数。*id
+	id
+ データベースのIDを表示する。
+*csm search
+	csm search [(-t <tags>)] [(-m <memo>)]  [(-d <dname>)]
+ CSMのパスを検索する。 <tags> はタグ、<memo>はメモ、<dname> はCSMのディレクトリ。
+*csm write
+ 	csm write [(-d <dname>)]
+ カードをCSMとして<dname>に書き込む。
+ *csm append
+	csm append [(-d <dname>)]  [(-O|--override)]      
+ CSMをデータベースに追加する。<dname>はディレクトリ。 上書きするときは、-O または --override をつける。
+*clean
+	clean
+*search
+	search  [(-t <tags>)] [(-m <memo>)] [(-p <pMode>)]
+ カードを検索する。<tags>はタグですべて含まれるカードを返す。
+ <memo>:メモ。部分一致したカードを返す。
+ <pMode>:結果の表示法。 "C" はコメント、"T" はタグ、"D" は日付、"F" はファイル名を表示する。例えば、「-p "CF"」ならコメントと日付を表示する。
+*tag
+	tag tot [<tag>]
+	tag [<tag>]
+ タグを検索する。<tag>はタグ名で部分一致したカードを返す。
+ *write
+	write tot
+	write
+ カードを書き込む。
+ *remove
+	remove tot [<tag>]
+	remove [(-t <tags>)] [(-m <memo>)]                 
+ カードを削除する。totの場合、<tag>はタグ名で、部分一致したカードを削除する。普通のカードの場合、<tags>はタグ名で<memo>はメモで、search と同じように検索し一致するカードを削除する。*csm write
+	csm write tot [<tag>] [(-d <dname>)]
+	csm write csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]
+	csm write [(-d <dname>)]
+ カードをCSMとして書き込む。<dname>はディレクトリ名。<dname>が指定されないときは、「%KYODAISHIKI_DB_DIR%\csmFiles」をディレクトリとする。
+ totのとき。<tag>はタグ名で、部分一致したものを書き込む。
+ csmのとき。<tags>はタグ。<memo>はメモ。selectの検索で一致したカードを書き込む。
+ selectの検索。 "0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm:*search
+ その他のときは、標準のホームと同様に書き込む。 "0aG9tZSDjga7jgrPjg57jg7Pjg4k=.csm:*search
+*csm append
+	append tot [<tag>] [(-d <dname>)] [(-O|--override)]
+	append csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]  [(-O|--override)]
+	append [(-d <dname>)] [(-O|--override)]
+ CSMをカードとしてデータベースに追加する。上書きするときは、--override をつける。
+ 変数は csm write と同様。
+*csm remove
+	csm remove
+ 「%KYODAISHIKI_DB_DIR%\csmFiles」を削除する。
+*search
+	search  [(-t <tags>)] [(--nt <noTags>)] [(-m <memo>)] [(-c <comment>)] [(-F <from>)] [(-U <until>)] [(-u <userid>)] [(-D <dbid>)] [(-p <pMode>)] [(--pn|--printNot)] [(-r|--random)]
+ カードを検索する。
+ -<tags>:タグ。全一致。
+ -<noTags>:タグ。このタグを含むカードを検索しない。
+ -<memo>:メモ。部分一致。
+ -<comment>:コメント。部分一致。
+ -<from>:日付の最低。この日以降を検索する。
+ -<until>:日付の最高。この日以下を検索する。
+ -<userid>:<userid>のカードを検索する。具体的には、「USERID:<userid>」をタグに追加する。
+ -<dbid>:<dbid>のカードを検索する。具体的には、「DBID:<dbid>」をタグに追加する。
+ -<pMode>:selectと同様。"0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm:<pMode>:
+ - --pn,--printNot:NOTカードも表示する。
+ - -r,--random:カードをランダムに並び替えて表示する。
+*remove
+	
+*selectのコマンド
+ "0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm書きかけ書きかけのカードは「書きかけ」とタグ付ける。知的生産メモENV__index__ の説明__INDEX__コードCODEPointクラスCLASSIndexクラスPOINTBaseCardBASECARDTAGSimpleCardSIMPLECARDクラスやモジュールについて書くときは、モジュール名をタグに付ける。TOT	(__index__)LogicLOGICLogic.DataLogic.TagLogic.GroupGROUPDB (__index__)論理関係のクラス。
+-#
+*変数
+-論理記号を数字として扱うための変数。
+-NORMAL	: 0  
+-NOT	: -1 否定記号
+-AND	: -2 論理積
+-OR	: -4 論理和
+-KAKKO	: (-8,-16) かっこ
+*class
+-Data	"0TG9naWMuRGF0YQ==.csm 
+-Tag	"0TG9naWMuVGFn.csm 
+-Group	"0TG9naWMuR3JvdXA=.csm 
+* isLogical(n)
+ それがLogicの変数か判定する。具体的には、「n<0」なら真を返す。インデックスはすべて「>=0」なので大丈夫。データの集合。
+-#
+*__init__(self,data=[],not_=False)
+-data	:データの本体
+-not_	:not_=True -> 否定の集合*class
+-Point
+-Index
+-BaseCard
+-Tag
+-SimpleCard
+-Card
+-TOT
+-Logic	"0TG9naWM=.csm 
+-DB	"0REIgKF9faW5kZXhfXyk=.csmクラスやモジュールの説明もまず、簡易的な説明を書く。じてんとして扱えたら便利である。MODULE論理関係のクラス。
+-#
+*変数
+-論理記号を数字として扱うための変数。
+-NORMAL	: 0  
+-NOT	: -1 否定記号
+-AND	: -2 論理積
+-OR	: -4 論理和
+-KAKKO	: (-8,-16) かっこ
+*class
+-Data	"0TG9naWMuRGF0YQ==.csm 
+-Tag	"0TG9naWMuVGFn.csm 
+-Group	"0TG9naWMuR3JvdXA=.csm 
+* isLogical(n)
+ それがLogicの変数か判定する。具体的には、「n<0」なら真を返す。インデックスはすべて「>=0」なので。 データの集合。A&B や A|B が一単位。
+-#
+これを組み合わせれば、A&B&C&.... とすべての論理列がつくれる。
+*__init__(left,right,attr,not_)
+-left	:左側のデータ。Logic.Group または Logic.Tag を取る。
+-right	:右側のデータ。Logic.Group または Logic.Tag を取る。
+-attr	:属性。Logic.NORMAL,Logic.AND,Logic.OR のいずれかを取る。
+-not_	:否定。
+*getID()
+ 変数を元にIDを取得する。
+*__hash__()
+ ハッシュを返す。
+*__bool__()
+ bool(self.left) or bool(self.right) を返す。
+*isTOT()
+ self.left または self.rightがTOTタグなら真を返す。
+ TOTタグ	:データの集合。
+-#
+*__init__(data=[],not_=False)
+-data	:データの本体
+-not_	:not_=True -> 否定の集合
+*isNot()
+ 否定の集合なら真を返す。
+*alter()
+ 「普通 -> 否定 , 否定 -> 普通」とする。
+*__add__(dst)
+ dstを足したものを返す。「self.or_(dst)」と同じ。
+*__call__(U)
+ データを返す。「普通」のときは self.data をそのまま返し、否定の集合のときは、U のうち self.data に含まれないものを返す。
+*and_(dst)
+ 論理積を返す。
+*or_(dst)
+ 論理和を返す。
+*else_(dst)
+ self.and_(dst.alter()) と同じ。 論理的なタグのクラス。否定などを持つ。
+ -#
+*変数
+-IS_TOT : TOTタグ。これがあると、Logic.Group.get()のときに TOT としての領域だけを扱う。(細かいものなのでわかる意味は無い)
+*__init__(nameIdx=Index(),attr=0,not_=False)
+-nameIdx : タグの名前のインデックス。
+-attr : 属性
+-not_ : 否定。タグを集合とみれば、True のときは否定の集合となる。
+*__hash__()
+ ハッシュ。
+*name(text)
+ タグ名を返す。self.nameIdx.get(text)
+*isNot()
+ not_=True なら真。
+*__get__(U,tots,exploerd=list())
+ タグからTOTを辿ってタグを取り、集合(Logic.Data)として返す。
+-U	:タグの全インデックス
+-tots	:たどるTOT
+-exploerdTOT:辿り終えたTOT
+*get(U,tots)
+ self.__get__ の実用版。
+*dump()
+-self の情報を返す。
+*__abs__()
+-絶対値を返す。not_=False ならそのまま、not=True なら self.alter() をして返す。
+*__bool__()
+ self.nameIdx=Index(0,0) なら偽を返す。
+*alter()
+ Logic.Dataのときと同じ。「普通 -> 否定,否定 -> 普通」を返す。
+*__eq__(dst)
+ 全変数が等しければ、真。
+*__str__(self)
+ タグのインデックスを文字列として返す。
+*__iter__()
+ タグのインデックスをイテレータとして返す。
+*iterTags()
+-タグを返す。self を返す。Logic.Group との帳尻合わせのために実装。
+*isTOTTag()
+ Logic.Tag(Logic.Tag.IS_TOT) を返す。 データの集合。A&B や A|B が一単位。
+-#
+これを組み合わせれば、A&B&C&.... とすべての論理列がつくれる。
+*__init__(left,right,attr,not_)
+-left	:左側のデータ。Logic.Group または Logic.Tag を取る。
+-right	:右側のデータ。Logic.Group または Logic.Tag を取る。
+-attr	:属性。Logic.NORMAL,Logic.AND,Logic.OR のいずれかを取る。
+-not_	:否定。
+*getID()
+ 変数を元にIDを取得する。
+*__hash__()
+ ハッシュを返す。
+*__bool__()
+ bool(self.left) or bool(self.right) を返す。
+*isTOT()
+ self.left または self.rightがTOTタグなら真を返す。
+ TOTタグ "0TG9naWMuVGFn.csm:IS_TOT
+*toTOT()
+ TOTタグを追加する。 Logic.Group(Logic.Tag.isTOTTag(),self,Logic.AND)
+*dump()
+ 変数の情報を返す。
+*__str__()
+ Group のインデックスを文字列として返す。
+*__iter__()
+ Group のインデックスをイテレータとして返す。
+*__eq__()
+ 等しければ真。
+*iterTag()
+ 含まれるタグをイテレータとして返す。
+*__getAsTOT__(U,tots,explored)
+ このグループのTOTとして含まれるタグを返す。
+* getAsTOT(U,tots,explored)
+ __getAsTOT__ の実用版。正引きコード　-> クラスや関数、機能。コード -> クラスや関数、クラス -> 関数 など.大きいまとまりから、部分を引く。コード -> クラスや関数、クラス -> 関数 など。逆引き部分から大きいまとまりを引く。<=>正引き。-Logic.Tag "0TG9naWMuVGFn.csm:*__iter__()
+-Logic.Tag.iterTags() "0TG9naWMuVGFn.csm:*iterTags()
+-Logic.Group	"0TG9naWMuR3JvdXA=.csm:*__iter__()*変数
+-SEQ	:数字の区切り。文字列に整形するときに数字の区切りに使う。
+*__init__(data)
+-data	:データ。数字の集合。
+*data
+ データを返す。
+*x
+ data[0].
+*y
+ data[1].
+*__bool__()
+ data がすべて 0 なら False を返す。
+*__eq__(dst)
+ data がすべて等しければ真を返す。
+*__iter__()
+ data をイテレータとして返す。
+*__str__()
+ data を文字列に整形して返す。
+ "({0})".format(Point.SEQ.join(map(str,self))インデックス。
+-#
+*変数
+-SEQ	:数字の区切り。
+*__init__(start,length)
+結局、text[start:start+length] として扱う。
+-start	:インデックスのスタート。
+-length	:インデックスの長さ。
+*end
+ start+length と同じ。
+*__lt__(dst) #self < dst
+ 小さければ真。start が違えば、start と比べ、同じならend で比べる。
+*__str__()
+ インデックスを文字列として返す。
+ Index.SEQ.join(map(str,self))
+*read(s)	#staticmethod
+-s	:文字列
+ 文字列(s)を Index に変換する。
+*get(text)
+-text	:対象の文字列
+ self を text のインデックスとして、データを返す。
+ text[self.start:self.end].
+*in_(dst)
+ self が dst の内側にあれば真を返す。
+ dst.start <= self.start <= self.end <= dst.end
+*or_(dst)
+ ...
+*else(dst)
+ self のうち dst に含まれない範囲を返す。DB	#__index__TOT	#__index__基本のカード。これを継承すれば、とりあえずデータベースで扱える。
+-#
+*そのまま使える
+-__hash__	#hash(self.id)
+-__eq__(dst)		#self.id==dst.id
+-__bool__()	#bool(self.id)
+*そのまま使えるが、オーバーライドした方が良いかも
+-read(line)	#データを読み込む #デフォルトは、pickle.loads(line)
+-__bytes__()	#データを吐き出す #デフォルトはpickle.dumps(self)
+*オーバーライド必須
+-id
+-#
+結局 id さえオーバーライドすれば、一応使える。
+__INDEX__SimpleCard に タグのインデックスをつけたもの。
+-# 
+*親クラス
+-SimpleCard
+*__init__(memoIdx,commentIdx,date)
+-memoIdx	:メモのインデックス
+-commentIdx	:コメントのインデックス
+-date		:日付。文字列。
+*id
+ ID。self.memoIdx を返す。
+*toData()
+ 変数をデータとして返す。
+ (self.memoIdx.data,self.commentIdx.data,self.date)
+*__str__()
+ 文字列として返す。
+ json.dumps(self.toData())
+*memo(text)
+ メモを返す。
+ self.memoIdx.get(text)
+*comment(text)
+ コメントを返す。
+ self.commentIdx.get(text)
+*read(line)	#staticmethod
+ jsonのデータを読み込む。BaseCardの子クラスSimpleCardの子クラス-SimpleCard "0U2ltcGxlQ2FyZA==.csm 
+-SimpleCardの子クラス
+-DB	 "0REIJI19faW5kZXhfXw==.csm-SimpleCard "0U2ltcGxlQ2FyZA==.csm 
+-SimpleCardの子クラス "0U2ltcGxlQ2FyZOOBruWtkOOCr+ODqeOCuQ==.csm
+-DB	 "0REIJI19faW5kZXhfXw==.csm-Card "0Q2FyZA==.csmutil.pySHELLSUTIL_utilSimpleCard に タグのインデックスをつけたもの。
+-# 
+*親クラス
+-SimpleCard
+*__init__(memoIdx,commentIdx,tagIdxes,date)
+-memoIdx	:メモのインデックス
+-commentIdx	:コメントのインデックス
+-tagIdxes	:タグのインデックス
+-date		:日付。文字列。
+*tags(text)
+ タグを返す。
+ list(map(lambda tagIdx:tagIdx.get(text),self.tagIdxes))
+*SimpleCardの機能
+ "*親クラス
+-BaseCard
+*__init__(idIdx)
+-idIdx	:id のインデックス
+*__str__()
+ データを文字列として返す。
+ json.dumps([self.idIdx.data])
+*getID(text)
+ IDを返す。
+ self.idIdx.get(text)
+*read(line)	#staticmethod
+ データを読み込む。メモとコメントのインデックスと日付を持つカード。
+-# 
+*親クラス
+-SimpleCard
+*__init__(memoIdx,commentIdx,date)
+-memoIdx	:メモのインデックス
+-commentIdx	:コメントのインデックス
+-date		:日付。文字列。
+*id
+ ID。self.memoIdx を返す。
+*toData()
+ 変数をデータとして返す。
+ (self.memoIdx.data,self.commentIdx.data,self.date)
+*__str__()
+ 文字列として返す。
+ json.dumps(self.toData())
+*memo(text)
+ メモを返す。
+ self.memoIdx.get(text)
+*comment(text)
+ コメントを返す。
+ self.commentIdx.get(text)
+*read(line)	#staticmethod
+ jsonのデータを読み込む。SimpleCard に タグのインデックスをつけたもの。
+-# 
+*親クラス
+-SimpleCard
+*__init__(memoIdx,commentIdx,tagIdxes,date)
+-memoIdx	:メモのインデックス
+-commentIdx	:コメントのインデックス
+-tagIdxes	:タグのインデックス
+-date		:日付。文字列。
+*tags(text)
+ タグを返す。
+ list(map(lambda tagIdx:tagIdx.get(text),self.tagIdxes))
+*SimpleCardの機能
+ "0U2ltcGxlQ2FyZA==.csmタグのカード。タグ名のインデックスとカードのIDを持つ。
+-#
+-要するに、本来「カード -> タグ」であるのの逆引き。
+*親クラス
+-BaseCard	"
+*__init__(tagIdx,cardIDs)
+-tagIdx	:タグ名のインデックス。
+-cardIDs:カードのID。リスト。
+*tag(text)
+ タグ名を返す。
+ self.tagIdx.get(text)
+*toData()
+ データに変換する。
+*__str__()
+ データに変換して文字列にする。
+*append(cardID)
+ カードのIDを追加する。
+ self.cardIDs.append(cardID)
+*__iter__()
+ カードのIDを返す。
+ iter(self.cardIDs)
+*__len__()
+ カードのIDの数を返す。
+ len(self.cardIDs)
+*read(line)	#staticmethod
+ データを読み込む。形式は toData() のもの。SimpleCard に タグのインデックスをつけたもの。
+-# 
+*親クラス
+-SimpleCard	"0U2ltcGxlQ2FyZA==.csm
+*__init__(memoIdx,commentIdx,tagIdxes,date)
+-memoIdx	:メモのインデックス
+-commentIdx	:コメントのインデックス
+-tagIdxes	:タグのインデックス
+-date		:日付。文字列。
+*tags(text)
+ タグを返す。
+ list(map(lambda tagIdx:tagIdx.get(text),self.tagIdxes))*親クラス
+-BaseCard	"0QmFzZUNhcmQ=.csm
+*__init__(idIdx)
+-idIdx	:id のインデックス
+*__str__()
+ データを文字列として返す。
+ json.dumps([self.idIdx.data])
+*getID(text)
+ IDを返す。
+ self.idIdx.get(text)
+*read(line)	#staticmethod
+ データを読み込む。メモとコメントのインデックスと日付を持つカード。
+-# 
+*親クラス
+-SimpleCard	"0U2ltcGxlQ2FyZA==.csm
+*__init__(memoIdx,commentIdx,date)
+-memoIdx	:メモのインデックス
+-commentIdx	:コメントのインデックス
+-date		:日付。文字列。
+*id
+ ID。self.memoIdx を返す。
+*toData()
+ 変数をデータとして返す。
+ (self.memoIdx.data,self.commentIdx.data,self.date)
+*__str__()
+ 文字列として返す。
+ json.dumps(self.toData())
+*memo(text)
+ メモを返す。
+ self.memoIdx.get(text)
+*comment(text)
+ コメントを返す。
+ self.commentIdx.get(text)
+*read(line)	#staticmethod
+ jsonのデータを読み込む。タグのカード。タグ名のインデックスとカードのIDを持つ。
+-#
+-要するに、本来「カード -> タグ」であるのの逆引き。
+*親クラス
+-BaseCard	"0QmFzZUNhcmQ=.csm
+*__init__(tagIdx,cardIDs)
+-tagIdx	:タグ名のインデックス。
+-cardIDs:カードのID。リスト。
+*tag(text)
+ タグ名を返す。
+ self.tagIdx.get(text)
+*toData()
+ データに変換する。
+*__str__()
+ データに変換して文字列にする。
+*append(cardID)
+ カードのIDを追加する。
+ self.cardIDs.append(cardID)
+*__iter__()
+ カードのIDを返す。
+ iter(self.cardIDs)
+*__len__()
+ カードのIDの数を返す。
+ len(self.cardIDs)
+*read(line)	#staticmethod
+ データを読み込む。形式は toData() のもの。COMMAND データの集合。A&B や A|B が一単位。
+-#
+これを組み合わせれば、A&B&C&.... とすべての論理列がつくれる。
+*__init__(left,right,attr,not_)
+-left	:左側のデータ。Logic.Group または Logic.Tag を取る。
+-right	:右側のデータ。Logic.Group または Logic.Tag を取る。
+-attr	:属性。Logic.NORMAL,Logic.AND,Logic.OR のいずれかを取る。
+-not_	:否定。
+*getID()
+ 変数を元にIDを取得する。
+*__hash__()
+ ハッシュを返す。
+*__bool__()
+ bool(self.left) or bool(self.right) を返す。
+*isTOT()
+ self.left または self.rightがTOTタグなら真を返す。
+ TOTタグ "0TG9naWMuVGFn.csm:IS_TOT
+*toTOT()
+ TOTタグを追加する。 Logic.Group(Logic.Tag.isTOTTag(),self,Logic.AND)
+*dump()
+ 変数の情報を返す。
+*__str__()
+ Group のインデックスを文字列として返す。
+*__iter__()
+ Group のインデックスをイテレータとして返す。
+*__eq__()
+ 等しければ真。
+*iterTag()
+ 含まれるタグをイテレータとして返す。
+*__getAsTOT__(U,tots,explored)
+ このグループのTOTとして含まれるタグを返す。
+* getAsTOT(U,tots,explored)
+ __getAsTOT__ の実用版。
+*__get__(U,tots,exploredTOT)
+ データを取る。
+ U	:全集合
+ tots	:全TOT
+ exploredTOT:探索済みのTOT
+*get(U,tots,exploredTOT)
+ __get__ の実用版。
+*getInKAKKO(numbers,start)	#staticmethod
+ カッコ内(Logic.KAKKO[0]とLogic.KAKKO[1]の間)のデータを取る。
+ numbers	:対象のデータ。
+ start		:探索の開始のインデックス。
+*make(numbers)		#staticmethod
+ 数字の配列から、Logic.Group をつくる。
+numbers:数字の配列。*** 変数 ***
+*DEFAULT_DUMP_DIR
+ dump home」のときのデフォルトのディレクトリ。
+ %USERPROFILE%desktop\dumpedHome
+*DEFAULT_BACKUP_DIR
+ 「backup home ...」のときのデフォルトのディレクトリ。
+ %USERPROFILE%desktop\buckupedHome
+*DEFAULT_DUMP_TAG_FNAME
+ 「dump tag」のときのデフォルトのファイル名。
+ %USERPROFILE%desktop\dumpedTag.csm
+*DEFAULT_CSM_DIR_F	:
+ CSM のデフォルトのディレクトリ。
+ <db_dname>\csmFiles
+*TMP
+ ランダムな数字。
+-#
+*class
+-Attr
+-AttrTags
+-Data
+-Tree
+-Category
+-CategoryTree
+-Expander
+-Trushutil.AttrCLASS util.AttrTagsモジュールのクラスや関数のカードをつくるときは、<module_name>.<class_name> などのようにしよう。なんとなく。(笑) 見やすい。util.Datautil.Treeutil.Categoryutil.CategoryTreeutil.Expanderutil.Trush*** 変数 ***
+*DEFAULT_DUMP_DIR
+ dump home」のときのデフォルトのディレクトリ。
+ %USERPROFILE%desktop\dumpedHome
+*DEFAULT_BACKUP_DIR
+ 「backup home ...」のときのデフォルトのディレクトリ。
+ %USERPROFILE%desktop\buckupedHome
+*DEFAULT_DUMP_TAG_FNAME
+ 「dump tag」のときのデフォルトのファイル名。
+ %USERPROFILE%desktop\dumpedTag.csm
+*DEFAULT_CSM_DIR_F	:
+ CSM のデフォルトのディレクトリ。
+ <db_dname>\csmFiles
+*TMP
+ ランダムな数字。
+-#
+*class
+-Attr		"0dXRpbC5BdHRy.csm 
+-AttrTags	"0dXRpbC5BdHRyVGFncw==.csm
+-Data	"0dXRpbC5EYXRh.csm 
+-Tree	"0dXRpbC5UcmVl.csm 
+-Category	"0dXRpbC5DYXRlZ29yeQ==.csm 
+-CategoryTree	"0dXRpbC5DYXRlZ29yeVRyZWU=.csm 
+-Expander	"0dXRpbC5FeHBhbmRlcg==.csm 
+-Trush	"0dXRpbC5UcnVzaA==.csm
+*** 関数 ***
+*culcSecond(s)
+sの秒を計算する。
+-s	:"<day>-<hour>-<second>"
+*to_datetime(s)
+ 文字列 s を datetime.datetime クラスに変換する。
+-s	:"<year>-<month>-<day>"linkLINK__index__.Card__index__.BaseCard__index__.DB__index__.Index__index__.Logic__index__.SimpleCard__index__.Point__index__.TOT__index__.Tag*class
+-Point	"0UG9pbnQ=.csm
+-Index	"0SW5kZXg=.csm 
+-BaseCard	"0QmFzZUNhcmQ=.csm
+-Tag	"0VGFn.csm
+-SimpleCard	"0U2ltcGxlQ2FyZA==.csm 
+-Card	"0Q2FyZA==.csm 
+-TOT	"0VE9UCSNfX2luZGV4X18=.csm
+-Logic	"0TG9naWM=.csm 
+-DB	"0REIgKF9faW5kZXhfXyk=.csm__file____path__PATH__profile____selenium____site__augment_hs3bookcrawldbutildiarygithubreference_bookreview拡張のコードは主なものだけ書く。コードのヘルプは開発のためにある。主でないものは短単純だし、開発としての需要は低い。コマンドのヘルプを見れば、使い方はわかる。__data____db____server____shell__codeコードのヘルプ。書きかけのヘルプ。xxxSORT_OF:XXXPOINT:100REVIEW*class
+-BaseDB
+-TOT_DB
+-BaseCardDB
+-BaseTagDB
+-CSM_DB
+-CardDB
+-TagDB
+-BaseHomeDB
+-HomeTagDB__db__.BaseDB__DB____db__.TOT_DB__db__.BaseCardDB__db__.BaseTagDB__db__ .CSM_DB__db__.CardDB__db__ .TagDB__DB__ __db__ .BaseHomeDB__db__ .HomeTagDB書きかけ,DB*class
+-BaseDB
+-TOT_DB
+-BaseCardDB
+-BaseTagDB
+-CSM_DB
+-CardDB
+-TagDB
+-BaseHomeDB
+-HomeTagDB
+-#
+*getDBIDs(homeDB,dbid)
+-homeDB	:homeDB
+-dbid	:データベースのID。
+ homeDB から ID が<dbid>と部分一致したデータベースを返す。イテレータ。ホームのデータベース。BaseHomeDB を継承してるもの。基本のデータベース。継承しないと使えない。
+*変数
+-DATA_FILE	:データを保存するファイル。 "data.txt"
+-dname	:ディレクトリ
+-text	:データの本体
+-lenText:len(text)
+*__init__(dname)
+-dname	:データベースのディレクトリ。<path>/<id>として扱う。
+*id
+ ID。self.dname を <path>/<id> と見て、<id> を返す。
+*dataFile
+ データのファイル。
+ <self.dname>/<self.DATA_FILE>
+*clear()
+ データを削除する。
+*find(s)
+-s	:文字列
+ データから s を探し、みつかったらそのIndex を返す。
+*appendText(s)
+-s	:文字列
+ s をデータとして追加する。find(s) で見つかったときは、追加せずにそのインデックスを返す。なければ、追加してインデックスを返す。
+*save()
+ データを保存する。self.text を self.dataFile に書き込む。
+*close()
+ self.save() と同じ。TOTを持つデータベース。
+-#
+*親クラス
+-BaseDB		"TOTを持つデータベース。
+-#
+*親クラス
+-BaseDB		"0X19kYl9fLkJhc2VEQg==.csm
+*変数
+-TOT_FILE	:TOTにデータのファイル。"tot.txt"
+-tots	:TOTデータベースについて*ファイルの位置
+ 基本的にデータベースはディレクトリ(<dname>) を引数に取る。そして、さまざまなファイルを <dname> 以下に配置する。BaseDBの場合は、DATA_FILE("data.txt")など。
+ ファイル名は変えることもできるが、基本は一定なので、一つのディレクトリを複数のデータベースとして扱うのは難しい。__shell__.CSMShell 用のデータベース。実態は無いし、継承しなくてもCSMShellで扱える。
+__shell__.CSMShell	"
+*appendCSMs(csms)
+...
+*dumpCSM()
+...__SHELL____shell__.CSMShell 用のデータベース。実態は無いし、継承しなくてもCSMShellで扱える。
+__shell__.CSMShell	"0X19zaGVsbF9fLkNTTVNoZWxs.csm
+*appendCSMs(csms)
+...
+*dumpCSM()
+...*親クラス
+-TOT_DB		"0X19kYl9fLlRPVF9EQg==.csm*親クラス
+-BaseCardDB	"0X19kYl9fLkJhc2VDYXJkREI=.csm*親クラス
+-BaseCard	"0X19pbmRleF9fLkJhc2VDYXJk.csm
+*__init__(idIdx)
+-idIdx	:IDのインデックス。
+*getID(text)
+ IDを返す。
+ self.idIdx.get(text)
+*__str__()
+ データを文字列として返す。
+*read(line)
+ データを読み込む。__str__ と同じ形式。util.DEFAULT_DUMP_DIR%USERPROFILE%\desktop\dumpedHome変数は「じてん」としても書いたら見やすい。二度手間に思えるが、わかりやすい。util.DEFAULT_BACKUP_DIRutil.DEFAULT_DUMP_TAG_FNAME%USERPROFILE%\dsktop\dumpedtag.csm変数は「変数 -> 変数の中身」と書く。util.DEFAULT_CSM_DIR_F<db_dname>\csmFiles。関数。tuil.BACKUPlambda:random.randint(10**24,10**36)util.TMPutil.attr_to_formatutil.Attr.to_formatVARvarじてんにおいて、タグに関するものは「タグ」と付ける。*** 変数 ***
+*DEFAULT_DUMP_DIR
+ dump home」のときのデフォルトのディレクトリ。
+ %USERPROFILE%desktop\dumpedHome
+*DEFAULT_BACKUP_DIR
+ 「backup home ...」のときのデフォルトのディレクトリ。
+ %USERPROFILE%desktop\buckupedHome
+*DEFAULT_DUMP_TAG_FNAME
+ 「dump tag」のときのデフォルトのファイル名。
+ %USERPROFILE%desktop\dumpedTag.csm
+*DEFAULT_CSM_DIR_F	:
+ CSM のデフォルトのディレクトリ。
+ <db_dname>\csmFiles
+*TMP
+ ランダムな数字。
+-#
+*class
+-Attr		"0dXRpbC5BdHRy.csm 
+-AttrTags	"0dXRpbC5BdHRyVGFncw==.csm
+-Data	"0dXRpbC5EYXRh.csm 
+-Tree	"0dXRpbC5UcmVl.csm 
+-Category	"0dXRpbC5DYXRlZ29yeQ==.csm 
+-CategoryTree	"0dXRpbC5DYXRlZ29yeVRyZWU=.csm 
+-Expander	"0dXRpbC5FeHBhbmRlcg==.csm 
+-Trush	"0dXRpbC5UcnVzaA==.csm
+-Docs	"
+-Command	"
+-AuHSShell	"
+*** 関数 ***
+*culcSecond(s)
+sの秒を計算する。
+-s	:"<day>-<hour>-<second>"
+*to_datetime(s)
+ 文字列 s を datetime.datetime クラスに変換する。
+-s	:"<year>-<month>-<day>"util.DocsDOCSutil.Commandutil.AuHSShellAUHSutilのコマンド*コマンド
+-"0dXRpbOOBruOCs+ODnuODs+ODiQ==.csmタグの一覧-code	:コードについてのヘルプ。*class
+-BaseDB		"
+-TOT_DB		"0X19kYl9fLlRPVF9EQg==.csm 
+-BaseCardDB	"0X19kYl9fLkJhc2VDYXJkREI=.csm 
+-BaseTagDB	"0X19kYl9fLkJhc2VUYWdEQg==.csm 
+-CSM_DB	"0X19kYl9fIC5DU01fREI=.csm 
+-CardDB	"0X19kYl9fLkNhcmREQg==.csm
+-TagDB
+-BaseHomeDB
+-HomeTagDB
+-#
+*getDBIDs(homeDB,dbid)
+-homeDB	:homeDB
+-dbid	:データベースのID。
+ homeDB から ID が<dbid>と部分一致したデータベースを返す。イテレータ。*class
+-BaseDB		"0X19kYl9fLkJhc2VEQg==.csm
+-TOT_DB		"0X19kYl9fLlRPVF9EQg==.csm 
+-BaseCardDB	"0X19kYl9fLkJhc2VDYXJkREI=.csm 
+-BaseTagDB	"0X19kYl9fLkJhc2VUYWdEQg==.csm 
+-CSM_DB	"0X19kYl9fIC5DU01fREI=.csm 
+-CardDB	"0X19kYl9fLkNhcmREQg==.csm
+-TagDB		"0X19kYl9fIC5UYWdEQg==.csm 
+-BaseHomeDB	"0X19kYl9fIC5CYXNlSG9tZURC.csm 
+-HomeTagDB	"0X19kYl9fIC5Ib21lVGFnREI=.csm
+-#
+*getDBIDs(homeDB,dbid)
+-homeDB	:homeDB
+-dbid	:データベースのID。
+ homeDB から ID が<dbid>と部分一致したデータベースを返す。イテレータ。-code	:コードについてのヘルプ。
+-var	:変数
+-env	:環境変数*class
+-Point		"0X19pbmRleF9fLlBvaW50.csm
+-Index		"0X19pbmRleF9fLkluZGV4.csm
+-BaseCard	"0X19pbmRleF9fLkJhc2VDYXJk.csm 
+-Tag	"0X19pbmRleF9fLlRhZw==.csm 
+-SimpleCard	"0X19pbmRleF9fLlNpbXBsZUNhcmQ=.csm 
+-Card	"0X19pbmRleF9fLkNhcmQ=.csm 
+-TOT	"0X19pbmRleF9fLlRPVA==.csm
+-Logic	"0TG9naWM=csm 
+-DB	"0REIgKF9faW5kZXhfXyk=.csm__index__.Logic.Group__index__.Logic.Data__index__.Logic.Tag*class
+-Point		"0X19pbmRleF9fLlBvaW50.csm
+-Index		"0X19pbmRleF9fLkluZGV4.csm
+-BaseCard	"0X19pbmRleF9fLkJhc2VDYXJk.csm 
+-Tag	"0X19pbmRleF9fLlRhZw==.csm 
+-SimpleCard	"0X19pbmRleF9fLlNpbXBsZUNhcmQ=.csm 
+-Card	"0X19pbmRleF9fLkNhcmQ=.csm 
+-TOT	"0X19pbmRleF9fLlRPVA==.csm
+-Logic	"0X19pbmRleF9fLkxvZ2lj.csm
+-DB	"0X19pbmRleF9fLkRC.csm論理関係のクラス。
+-#
+*変数
+-論理記号を数字として扱うための変数。
+-NORMAL	: 0  
+-NOT	: -1 否定記号
+-AND	: -2 論理積
+-OR	: -4 論理和
+-KAKKO	: (-8,-16) かっこ
+*class
+-Data	"0X19pbmRleF9fLkxvZ2ljLkRhdGE=.csm
+-Tag	"0X19pbmRleF9fLkxvZ2ljLlRhZw==.csm 
+-Group	"0X19pbmRleF9fLkxvZ2ljLkdyb3Vw.csm 
+* isLogical(n)
+ それがLogicの変数か判定する。具体的には、「n<0」なら真を返す。インデックスはすべて「>=0」なので。util.BACKUP*** 変数 ***
+*DEFAULT_DUMP_DIR
+ dump home」のときのデフォルトのディレクトリ。
+ %USERPROFILE%desktop\dumpedHome
+*DEFAULT_BACKUP_DIR
+ 「backup home ...」のときのデフォルトのディレクトリ。
+ %USERPROFILE%desktop\buckupedHome
+*DEFAULT_DUMP_TAG_FNAME
+ 「dump tag」のときのデフォルトのファイル名。
+ %USERPROFILE%desktop\dumpedTag.csm
+*DEFAULT_CSM_DIR_F	:
+ CSM のデフォルトのディレクトリ。
+ <db_dname>\csmFiles
+*TMP
+ ランダムな数字。
+-#
+*class
+-Attr		"0dXRpbC5BdHRy.csm 
+-AttrTags	"0dXRpbC5BdHRyVGFncw==.csm
+-Data	"0dXRpbC5EYXRh.csm 
+-Tree	"0dXRpbC5UcmVl.csm 
+-Category	"0dXRpbC5DYXRlZ29yeQ==.csm 
+-CategoryTree	"0dXRpbC5DYXRlZ29yeVRyZWU=.csm 
+-Expander	"0dXRpbC5FeHBhbmRlcg==.csm 
+-Trush	"0dXRpbC5UcnVzaA==.csm
+-AuHSShell	"0dXRpbC5BdUhTU2hlbGw=.csm
+*** 関数 ***
+*culcSecond(s)
+sの秒を計算する。
+-s	:"<day>-<hour>-<second>"
+*to_datetime(s)
+ 文字列 s を datetime.datetime クラスに変換する。
+-s	:"<year>-<month>-<day>"*変数
+-URL:"URL"
+-SEQ:":"
+*to_format(attr)	#staticmethod
+-attr	:属性
+ attrをタグ用のフォーマットに変換する。
+ attr+Attr.SEQ+"{0}"
+*__init__(attr)
+-attr	:属性
+*format(value)
+ Attr.to_format(self.attr).format(value) と同じ。
+*__call__(value)
+-self.format(value) と同じ。
+*parse(tags)	#staticmethod
+-tags	:タグ
+ タグから、属性と値を取り出す。
+例) ["HELLO","LAN:ENGLISH","TYPE:GREETING"] -> {"LAN":["ENGLISH"],"TYPE":["GREETING"]}
+*get(tags,attr,default)	#staticmethod
+-tags	:タグ
+-attr	:属性
+-default:返り値がないときに返すもの。デフォルトは []。
+ タグから、属性が attr のものの値を返す。型はリスト。
+ Attr.parse(tags).get(attr,default) に同じ。ATTRカテゴリー。
+-#
+*変数
+-TITLE_HEAD	:カテゴリーのタイトルの頭。"*"
+-COL_HEAD	:カテゴリーの行の頭。"-"
+-COMMENT	:コメント。 [#\"].*
+*__init__(title,cols=[],childs=[])
+-title	:タイトル
+-cols	:行
+-childs	:こども。Category
+*get_cols()
+-すべての行を返す。こどもの行も再帰的に返す。
+*toLines()
+ テキスト用に整形して、その行を返す。
+ まず、タイトルにTITLE_HEAD を付けて返す。
+ 次に、行のそれぞれに COL_HEAD を付けて返す。
+ そして、こどもで toLines して、返ってきたものに、 COL_HEAD を付けて返す。つまり再帰的にやる。
+ 説明するとややこしいが、試すと明快。
+*__str__()
+ テキスト用に整形して文字列を返す。
+ "\n".join(self.toLines())使うときの注意使用法使用法に関するものは「使用法」と付ける。ノウハウ複数のデータベースを扱いたいときリンク*2つ以上開く場合
+ 閉じるときに保存されるので、最後に閉じたものが保存される。もし、保存したいのを先に閉じてしまったときは、×ばつ印を押して閉じる。
+*開くとき
+ 横着して開くと、データが消えてしまうことがある。具体的には、一つ目を閉じる処理の最中にもう一つ開くと。混乱して消えてしまうことがある。開くときは十分に注意を。 select や select2 では一つのデータベースしか扱えない。複数を扱いたいときは、link を使う。
+ link	"0bGluaw==.csm
+ まず
+	$ ln
+と打つと、リンクのシェルが始まる。そして例えば
+	:> append fruit fruit
+とすると、IDが fruit タグが「fruit」のリンクのデータベースがつくられる。リンクのデータベースは普通のデータベースとは区別される。そして
+	:> se fruit
+とすると、fruit に対してシェルが起動される。一見一つしか扱ってないようだが、次に例えば、grape と apple という普通のデータベースがあるとする。そこで
+	>> append grape
+	>> append apple
+とする。詳細は link　のドキュメントで。	"0bGluaw==.csm
+ すると、grape と apple を同時に扱える。
+ 	>> search
+とすれば、どちらのカードも検索されるし
+	>>csm write
+もできる。
+-
+ また util でも複数同時に扱えるコマンドはある。
+ util	" select や select2 では一つのデータベースしか扱えない。複数を扱いたいときは、link を使う。
+ link	"0bGluaw==.csm
+ まず
+	$ ln
+と打つと、リンクのシェルが始まる。そして例えば
+	:> append fruit fruit
+とすると、IDが fruit タグが「fruit」のリンクのデータベースがつくられる。リンクのデータベースは普通のデータベースとは区別される。そして
+	:> se fruit
+とすると、fruit に対してシェルが起動される。一見一つしか扱ってないようだが、次に例えば、grape と apple という普通のデータベースがあるとする。そこで
+	>> append grape
+	>> append apple
+とする。詳細は link　のドキュメントで。	"0bGluaw==.csm
+ すると、grape と apple を同時に扱える。
+ 	>> search
+とすれば、どちらのカードも検索されるし
+	>>csm write
+もできる。
+-
+ また util でも複数同時に扱えるコマンドはある。
+ util	"0dXRpbA==.csm select や select2 では一つのデータベースしか扱えない。そこで複数を扱いたいときは、link を使う。
+ link	"0bGluaw==.csm
+ まず
+	$ ln
+と打つと、リンクのシェルが始まる。そして例えば
+	:> append fruit fruit
+とすると、IDが fruit タグが「fruit」のリンクのデータベースがつくられる。リンクのデータベースは普通のデータベースとは区別される。そして
+	:> se fruit
+とすると、fruit に対してシェルを起動する。一見一つしか扱ってないようだが、次に例えば、grape と apple という普通のデータベースがあるとする。そこで
+	>> append grape
+	>> append apple
+とする。詳細は link　のドキュメントで。	"0bGluaw==.csm
+ すると、grape と apple を同時に扱える。
+ 	>> search
+とすれば、どちらのカードも検索されるし
+	>>csm write
+もできる。
+-
+ また util でも複数同時に扱えるコマンドはある。
+ util	"0dXRpbA==.csmコマンドが長いとき 良く使うが、長いコマンドを略したいときがある。そのときは、alias コマンドを使う。
+ 例えば、 csm write と打つのが面倒なときは
+ 	>>alias dump csm write
+	>>alias d dump
+とすれば、 d と押すだけでいける。詳細はこちらで。 "0c2VsZWN0MiDjga7jgrPjg57jg7Pjg4k=.csm
+ se2_alias.txt に書き込めば、いつどのデータベースでも適用される。
+ もっと特殊なものでも良い。例えば
+ 	>> alias koncyu search -t 昆虫 -m ムシ -p c
+	>> alias k koncyu
+ともできる。単純な置換なので、
+ 	>> alias koncyu search -t -m ムシ -p c
+	>> alias k koncyu
+	>>k -t 昆虫
+は、「-m」と「-t」が逆になるので出来ない。ALIAS*csm write
+	csm write tot [<tag>] [(-d <dname>)]
+	csm write csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]
+	csm write [(-d <dname>)]
+ カードをCSMとして書き込む。<dname>はディレクトリ名。<dname>が指定されないときは、「%KYODAISHIKI_DB_DIR%\csmFiles」をディレクトリとする。
+ totのとき。<tag>はタグ名で、部分一致したものを書き込む。
+ csmのとき。<tags>はタグ。<memo>はメモ。selectの検索で一致したカードを書き込む。
+ selectの検索。 "0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm:*search
+ その他のときは、標準のホームと同様に書き込む。 "0aG9tZSDjga7jgrPjg57jg7Pjg4k=.csm:*search
+*csm append
+	append tot [<tag>] [(-d <dname>)] [(-O|--override)]
+	append csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]  [(-O|--override)]
+	append [(-d <dname>)] [(-O|--override)]
+ CSMをカードとしてデータベースに追加する。上書きするときは、--override をつける。
+ 変数は csm write と同様。
+*csm remove
+	csm remove
+ 「%KYODAISHIKI_DB_DIR%\csmFiles」を削除する。
+*search
+	search  [(-t <tags>)] [(--nt <noTags>)] [(-m <memo>)] [(-c <comment>)] [(-F <from>)] [(-U <until>)] [(-u <userid>)] [(-D <dbid>)] [(-p <pMode>)] [(--pn|--printNot)] [(-r|--random)]
+ カードを検索する。
+ -<tags>:タグ。全一致。
+ -<noTags>:タグ。このタグを含むカードを検索しない。
+ -<memo>:メモ。部分一致。
+ -<comment>:コメント。部分一致。
+ -<from>:日付の最低。この日以降を検索する。
+ -<until>:日付の最高。この日以下を検索する。
+ -<userid>:<userid>のカードを検索する。具体的には、「USERID:<userid>」をタグに追加する。
+ -<dbid>:<dbid>のカードを検索する。具体的には、「DBID:<dbid>」をタグに追加する。
+ -<pMode>:selectと同様。"0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm:<pMode>:
+ - --pn,--printNot:NOTカードも表示する。
+ - -r,--random:カードをランダムに並び替えて表示する。
+*remove
+-
+*selectのコマンド
+ "0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csmHOW select や select2 では一つのデータベースしか扱えない。そこで複数を扱いたいときは、link を使う。
+ link	"0bGluaw==.csm
+ まず
+	$ ln
+と打つと、リンクのシェルが始まる。そして例えば
+	:> append fruit fruit
+とすると、IDが fruit タグが「fruit」のリンクのデータベースがつくられる。リンクのデータベースは普通のデータベースとは区別される。そして
+	:> se fruit
+とすると、fruit に対してシェルを起動する。一見一つしか扱ってないようだが、次に例えば、grape と apple という普通のデータベースがあるとする。そこで
+	>> append grape
+	>> append apple
+とする。詳細は link　のドキュメントで。	"0bGluaw==.csm
+ すると、grape と apple を同時に扱える。
+ 	>> search
+とすれば、どちらのカードも検索されるし
+	>>csm write
+もできる。
+-
+ また util でも複数同時に扱えるコマンドはある。
+ utilのコマンド	"0dXRpbOOBruOCs+ODnuODs+ODiQ==.csm*** 変数 ***
+*DEFAULT_DUMP_DIR
+ dump home」のときのデフォルトのディレクトリ。
+ %USERPROFILE%desktop\dumpedHome
+*DEFAULT_BACKUP_DIR
+ 「backup home ...」のときのデフォルトのディレクトリ。
+ %USERPROFILE%desktop\buckupedHome
+*DEFAULT_DUMP_TAG_FNAME
+ 「dump tag」のときのデフォルトのファイル名。
+ %USERPROFILE%desktop\dumpedTag.csm
+*DEFAULT_CSM_DIR_F	:
+ CSM のデフォルトのディレクトリ。
+ <db_dname>\csmFiles
+*TMP
+ ランダムな数字。
+-#
+*class
+-Attr		"0dXRpbC5BdHRy.csm 
+-AttrTags	"0dXRpbC5BdHRyVGFncw==.csm
+-Data	"0dXRpbC5EYXRh.csm 
+-Tree	"0dXRpbC5UcmVl.csm 
+-Category	"0dXRpbC5DYXRlZ29yeQ==.csm 
+-CategoryTree	"0dXRpbC5DYXRlZ29yeVRyZWU=.csm 
+-Expander	"0dXRpbC5FeHBhbmRlcg==.csm 
+-Trush	"0dXRpbC5UcnVzaA==.csm
+-AuHSShell	"0dXRpbC5BdUhTU2hlbGw=.csm
+*** 関数 ***
+*culcSecond(s)
+sの秒を計算する。
+-s	:"<day>-<hour>-<second>"
+*to_datetime(s)
+ 文字列 s を datetime.datetime クラスに変換する。
+-s	:"<year>-<month>-<day>"
+*コマンド
+ "0dXRpbOOBruOCs+ODnuODs+ODiQ==.csm個人的に使いやすいALIAS-dump 	-> csm write
+-d 	-> dump
+-admit	-> csm append --override
+-ad	-> admit
+-at	-> append tag
+-rt	-> remove tag
+-rmt	-> remove --trushファイルを管理する。__FILE__ ファイルは木構造上にある。そしてファイルを分類するときは、その関連のディレクトリに入れて、そしてそのディレクトリをまた関連のディレクトリに入れて、,,, とする。勿論それは素晴らしいし、用も足りる。しかしあるものは沢山の集合に属する。例えば、あるAVが名作であるとする。そのときは、「AV -> 名作 -> ファイル」とすれば良い。しかし「AV -> ファイル」「名作 -> ファイル」としたいときもあるのではないか。また、女優単位でディレクトリを作ってるとする。そして、もしある AV に複数の人が出てたらどちらに入れるか。これは些細な問題だが、要するに、あるものは沢山の集合に属するということである。
+ 一案として、リンクを保存するというのはあるかもしれない。しかし一々作るのは面倒だし、美しいとも思えない。
+ そのときにこの京大式カードを活用するのはどうだろうか。__file__ シェルを使えば、ファイルのカードを作り、簡単にタグ付け出来る。コメントも書ける。
+ まず例えば
+ 	% append AV av file DNAME:%USERPROFILE%\videos\av
+とする。「DNAME:...」は後で使う。そして
+	% __file__ ファイルは木構造上にある。そしてファイルを分類するときは、その関連のディレクトリに入れて、そしてそのディレクトリをまた関連のディレクトリに入れて、,,, とする。勿論それは素晴らしいし、用も足りる。しかしあるものは沢山の集合に属する。例えば、あるAVが名作であるとする。そのときは、「AV -> 名作 -> ファイル」とすれば良い。しかし「AV -> ファイル」「名作 -> ファイル」としたいときもあるのではないか。また、女優単位でディレクトリを作るとする。そのとき、ある AV に複数の人が出てたらどれに入れるか。これは些細な問題だが、要するに、あるものは沢山の集合に属するということである。
+ 一案として、リンクを保存するというのはあるかもしれない。しかし一々作るのは面倒だし、美しいとも思えない。
+ そのときにこの京大式カードを活用するのはどうだろうか。__file__ シェルを使えば、ファイルのカードを作り、簡単にタグ付け出来る。そしてコメントも書ける。
+ まず例えば
+ 	% append AV av file DNAME:%USERPROFILE%\videos\av
+とする。「DNAME:...」は後で使う。そして
+	% du __file__ av
+としシェルを起動する。次に
+	>> append dir --depth 3
+とすれば、「DNAME:<dname>」の <dname> のファイルをカードにする。--depth は深さで、0ならその直下のファイルだけを扱う。「-d <dname>」とすれば、こちらが優先される。
+ ファイルのカードは、メモにファイル名、タグに「DNAME:<dname>」とそのディレクトリが書かれる。
+ そしてタグを付ければ、一つのファイルを色々なものに属しているとみなせる。一々付けるのは面倒だが、
+	>>append tag -t DNAME:<dname> <tags>...
+ と、ディレクトリ単位で付けたり、メモを元に工夫して付ければ良いと思う。
+ そして例えばビデオの場合は
+ 	>> vlc -t 制服もの
+などとすれば、タグを元にまとめて開ける。サーバーを立てる__SERVER__ サーバーを立てて、直接通信する。ただのテキストのやり取りだから、セキュリティは大丈夫だろう。自作の楽しみというのもあるが、まず、良く言えばシンプル、悪く言えば簡素で良い。シンプルだから拡張も簡単である。また大手のソフトは対象の人が多すぎて、中々自分個人の需要とぴったりとは合わない。
+ サーバーを立てるには
+ 	% server start <dbid>
+とすれば立てれる。接続数や読み書きの権限は server.conf で設定できる。あまり個人のパソコンで多数の接続はしない方が良いと思う。僕は基本は github に上げている。
+ server.conf	"
+ 止めるには
+ 	% server stop <dbid>
+とする。CONF サーバーを立てて、直接通信する。ただのテキストのやり取りだから、セキュリティは大丈夫だろう。自作の楽しみというのもあるが、まず、良く言えばシンプル、悪く言えば簡素で良い。シンプルだから拡張も簡単である。また大手のソフトは対象の人が多すぎて、中々自分個人の需要とぴったりとは合わない。
+ サーバーを立てるには
+ 	% server start <dbid>
+とすれば立てれる。接続数や読み書きの権限は server.conf で設定できる。あまり個人のパソコンで多数の接続はしない方が良いと思う。僕は基本は github に上げている。
+ server.conf	"0c2VydmVyLmNvbmY=.csm
+ 止めるには
+ 	% server stop <dbid>
+とする。-code	:コードについてのヘルプ。
+-var	:変数
+-env	:環境変数
+-how	:使用法,ノウハウ
+-conf	:設定ファイル*chmod
+	chmod [-][rw] <fname>,...
+ 権限を設定する。<fname>はユーザーファイルで、ユーザー名を書き連ねる。
+ 	chmod rw user.txt
+とすれば、user.txt のユーザーは読み書きの権限を与えられる。
+「-」をつければ、権限をなくす。仮に user.txt = [aaa,bbb,ccc] user2.txt = [bbb,ccc] とする。そして
+ 	chmod rw user.txt
+	chmod -w user2.txt
+とすると、まず [aaa,bbb,ccc] に読み書きの権限が与えられる。
+次に [bbb,ccc]*chmod
+	chmod [-][rw] <fname>,...
+ 権限を設定する。<fname>はユーザーファイルで、ユーザー名を書き連ねる。
+ 	chmod rw user.txt
+とすれば、user.txt のユーザーは読み書きの権限を与えられる。
+「-」をつければ、権限をなくす。仮に user.txt = [aaa,bbb,ccc] user2.txt = [bbb,ccc] とする。そして
+ 	chmod rw user.txt
+	chmod -w user2.txt
+とすると、まず [aaa,bbb,ccc] に読み書きの権限が与えられる。次に [bbb,ccc] の書き込みの権限がなくなるので、結局
+-aaa	:rw
+-bbb	:r
+-ccc	:r
+となる。
+*limit
+-	limit <number>
+サーバーの最大接続数を設定する。デフォルトは 10。 サーバーを立てて、直接通信する。ただのテキストのやり取りだから、セキュリティは大丈夫だろう。自作の楽しみというのもあるが、まず良く言えばシンプル、悪く言えば簡素で良い。シンプルだから拡張も簡単である。また大手のソフトは対象の人が多すぎて、中々自分個人の需要とぴったりとは合わない。
+ サーバーを立てるには
+ 	% server start <dbid>
+とすれば立てれる。接続数や読み書きの権限は server.conf で設定できる。あまり個人のパソコンで多数の接続はしない方が良いと思う。僕は基本は github に上げている。
+ server.conf	"0c2VydmVyLmNvbmY=.csm
+ 止めるには
+ 	% server stop <dbid>
+とする。*category
+	category append [(-t <tags>)] [(-m <memo>)] <srcid> <dstid>
+-<tags>	:タグ
+-<memo> :メモ
+-<srcid> :追加元のID
+-<dstid> :追加先のID
+ これは、<srcid>のカードをカテゴリーとして解析し、TOTとして <dstid> に追加する。メモがTOTの名前で、コメントのカテゴリーの行が、TOTのタグになる。
+ <srcid> から <tags> と <memo> によってカードを検索する。それをカテゴリーとして解析し、TOTに変換し、<dstid> に追加する。
+*append
+	append tag db <dbid> <tagsToAppend>...
+	append db <srcid> <dstid> [(-u <userid>)]
+	append home [(-d <dname>)]
+	append csm <srcid> <dstid> [(-t <tags>)] [(-m <memo>)]
+	append tot <srcid> <dstid> [(-t <tag>)]
+ append tag は <dbid> のIDのデータベースに <tagsToAppend> をタグとして追加する。
+ append db は <srcid> のカードとTOTを <dstid> に追加する。
+ append home は 「dump home ...」で吐き出されたデータを追加する。
+ append csm は <srcid> から <tags> と <memo> によって検索し、そのカードを <dstid> に追加する。
+ append tot は <srcid> から <tag> でTOTを検索し、それを <dstid> で追加する。
+*copy
+	copy <srcid> <dstid>
+<srcid> を <dstid> にコピーする。<dstid> が存在するときは不可。
+*backup
+	backup dir [(-d <dname>)] [--remove]
+	backup <dbid> [(-f <format>)]
+ backup dir はホームのディレクトリを <dname> にコピーする。
+ backup <dbid> は、IDが<dbid> に一致するデータベースを 「<format>.format(dbid>)」にコピーする。<format> が未指定の場合は、"__{0}.backup" となり、__<dbid>.backup にコピーする。
+*dump
+	dump tag <dbid> [(-f <fname>)]
+	dump home [(-d <dname>)]
+	dump <dbid>
+*remove
+	remove tag db [(-t <tags>)] [(-D <dbid>)] <tagsToRemove>
+	remove trush <beforeDay>
+ remove tag は IDが <dbid> のデータベースのタグ(<tags>)から、タグ(<tagsToRemove>)を削除する。
+ remove trush は ID が __trush のデータベースから <beforeDay>日より前のカードを削除する。要するに、ゴミ箱の古いカードを削除するということである。
+*csm remove
+	csm remove <dbid>
+ <dbid> に一致するデータベースの CSM のディレクトリを削除する。具体的には、一致するデータベースのディレクトリを<db_dname>とすれば、「<db_dname>\csmFiles」を削除する。
+*number
+	number <dbid> [(-t <tags>)] [(-m <memo>)]
+ <dbid> から <tags> と <memo> で検索し、そのカードの枚数を表示する。
+*rename
+	rename <srcid> <dstid>
+ <srcid> を <dstid> に rename する。*変数
+-DEFAULT_CSM_DIR :標準のCSMのディレクトリ。 %USERPROFILE%\Desktop\csmFiles
+*class
+-BaseShell
+-BaseShell2
+-Shell
+-PMode
+-CSMShell
+-CSMShell2
+-DBShell
+-ClientShell
+-BaseHomeShell
+-BaseServerHomeShell
+-HomeShell
+-HomeLoader
+*is_server(db)
+ db がサーバーが調べる。
+ hasattr(db,"serve_forever")
+*loadHome(dname,host)
+ ディレクトリからホームを起動し、シェルを起動する。*__init__(dname,CardDBClass=__index__.DB,DBClass=CardDB,cardAsBytes=True)
+-dname	:ディレクトリ名
+-CardDBClass	:DBのカードのクラス。
+-DBClass	:DBのクラス。
+-cardAsBytes	:カードの読み書きのときにバイトとしてするか文字列でするか。 基本のホームのクラス。データベースを管理し、その情報も管理する。
+ -#
+*親クラス
+-BaseTagDB
+*__init__(dname,CardDBClass=__index__.DB,DBClass=CardDB,cardAsBytes=True)
+-dname	:ディレクトリ名
+-CardDBClass	:DBのカードのクラス。
+-DBClass	:DBのクラス。
+-cardAsBytes	:カードの読み書きのときにバイトとしてするか文字列でするか。
+ CardDBClass とはカードとしてのデータベースで、要するにデータベースの情報である。一番シンプルなのは、__index__.DB で idIdx(idのインデックス)のみをもつ。
+ DBClass とは データベースの型である。self.select するときにこのクラスとして選択する。
+*getPath(dbid)
+ dbid をself のデータベースのIDとして見たときのパスを返す。
+ os.path.join(self.dname,dbid) に同じ 基本のホームのクラス。データベースを管理し、その情報も管理する。
+ -#
+*親クラス
+-BaseTagDB	"0X19kYl9fLkJhc2VUYWdEQg==.csm
+*__init__(dname,CardDBClass=__index__.DB,DBClass=CardDB,cardAsBytes=True)
+-dname	:ディレクトリ名
+-CardDBClass	:DBのカードのクラス。
+-DBClass	:DBのクラス。
+-cardAsBytes	:カードの読み書きのときにバイトとしてするか文字列でするか。
+ CardDBClass とはカードとしてのデータベースで、要するにデータベースの情報である。一番シンプルなのは、__index__.DB で idIdx(idのインデックス)のみをもつ。
+ __index__.DB	"
+ DBClass とは データベースの型である。self.select するときにこのクラスとして選択する。
+*getPath(dbid)
+ dbid をself のデータベースのIDとして見たときのパスを返す。
+ os.path.join(self.dname,dbid) に同じ
+*listDB()
+ カードを返す。
+ self.cards.values()
+*dumpDB()
+ 全データベースを返す。イテレータ。
+*select(dbid,*args,**kwargs)
+ カードの中に dbid があれば、データベースを返す。args と kwargs はデータベースの引数に渡される。 基本のホームのクラス。データベースを管理し、その情報も管理する。
+ -#
+*親クラス
+-BaseTagDB	"0X19kYl9fLkJhc2VUYWdEQg==.csm
+*__init__(dname,CardDBClass=__index__.DB,DBClass=CardDB,cardAsBytes=True)
+-dname	:ディレクトリ名
+-CardDBClass	:DBのカードのクラス。
+-DBClass	:DBのクラス。
+-cardAsBytes	:カードの読み書きのときにバイトとしてするか文字列でするか。
+ CardDBClass とはカードとしてのデータベースで、要するにデータベースの情報である。一番シンプルなのは、__index__.DB で idIdx(idのインデックス)のみをもつ。
+ __index__.DB	"0X19pbmRleF9fLkRC.csm
+ DBClass とは データベースの型である。self.select するときにこのクラスとして返す。
+*getPath(dbid)
+ dbid をself のデータベースのIDとして見たときのパスを返す。
+ os.path.join(self.dname,dbid) に同じ
+*listDB()
+ カードを返す。
+ self.cards.values()
+*dumpDB()
+ 全データベースを返す。イテレータ。
+*select(dbid,*args,**kwargs)
+ カードの中に dbid があれば、データベースを返す。args と kwargs はデータベースの引数に渡される。
+*append(dbid,tags)
+-dbid	:データベースのID
+-tags	:タグ
+ データベースのカードを追加する。
+*remove(dbid)
+ データベースのカードを削除する。
+*getDBIDs(dbid)
+ dbidに match するデータベースのIDを返す。
+*close()
+ ホームを閉じる。管理してるデータベースも閉じる。BaseHomeDB の CardDBClassを__index__.DB,DBClassをTagDB にしたもの。
+*親クラス
+-BaseHomeDB	"0X19kYl9fIC5CYXNlSG9tZURC.csmコードの説明はとりあえず書いて、使用法の材料にしよう。_util.Query_UTILクエリ*変数
+-RECV_MAX_BYTES	:1024
+-HASH_N	:hash(s) の最大の長さ。64
+*class
+-Query	
+*hash(s)
+ s をbase64でハッシュする。
+*inputUntilSeq(text="",seq="",output=sys.stdout)
+*realpath(fname)*変数
+-RECV_MAX_BYTES	:1024
+-HASH_N	:hash(s) の最大の長さ。64
+*class
+-Query	"0X3V0aWwuUXVlcnk=.csm
+*hash(s)
+ s をbase64でハッシュする。
+*inputUntilSeq(text="",seq="",output=sys.stdout)
+*realpath(fname)
+*find(l,n,start,end)
+*subQuote(s)
+*subQuotes(data)*変数
+-RECV_MAX_BYTES	:1024
+-HASH_N	:hash(s) の最大の長さ。64
+*class
+-Query	"0X3V0aWwuUXVlcnk=.csm
+*hash(s)
+ s をbase64でハッシュする。
+*inputUntilSeq(text="",seq="",output=sys.stdout)
+-text	:読み込むときに表示するテキスト。
+-seq	:入力の区切り。
+-output	:読み込むときにテキストを書き込むところ。
+seq が入力されるまで、input() を繰り返す。行単位でイテレータで返す。
+*realpath(fname)
+ fname の環境変数などを展開して、パスを返す。
+ os.path.abspath( os.path.expanduser(os.path.expandvars(fname)))
+*find(l,n,start,end)
+ 配列 l から nを探す。見つけたら インデックスを返す。start から end のあいだを検索する。
+*subQuote(s)
+ ".*" または '.*' を .* にする。
+*subQuotes(data)
+ subQuote の複数版。
+*__recv2(res,socket,endEvent,maxBytes=RECV_MAX_BYTES)
+-res	:取得したデータを格納するところ
+-socket	:ソケット
+-endEvent:イベント
+-maxBytes:最大読み込みバイト
+ socket からデータを読み込む。読み込めたら res にデータを入れて終わる。endEventがセットされたら終わる。どちらでもなければずっと待つ。
+*recv2(socket,maxBytes=RECV_MAX_BYTES)
+ socket からデータを読み込む。__recv2 をスレッドとして起動する。
+ (res,endEvent) を返す。変数は __recv2 と同様。
+*recv3(socket,maxBytes=RECV_MAX_BYTES)
+ socket からデータを読み込む。データが返ってくるか、socket が閉じるまで待つ。データを返す。
+*recvForServer(socket,server,tv=0.5,maxBytes=RECV_MAX_BYTES)
+ socket からデータを読み込む。recv3 とほぼ同じだが
+、server が閉じてれば、帰ってくる。
+*recvall(socket,blocked=False,timeout=10,maxBytes=RECV_MAX_BYTES)
+ socket からデータを読み込む。データが取れなくなるまで読み込む。
+ blocked が真のときは、一度ブロックする。偽のときは しない。
+*subSpace(s)
+ スペースを取り除く。
+ re.sub("^[ \t]+|[\t ]+$","",s)*変数
+-STR_SEQ	:文字列にするときの区切り。標準は " "。
+-command	:コマンド
+-args		:引数
+初期化のときの、data を 
+	data == [command.upper(),*args] 
+とする。つまり 
+	data[0] == command.upper()(大文字にする) 
+	data[1:] == args
+となる。
+*__init__(data=[])
+-data	:データの本体
+*append(data)
+ データを追加する。
+ self.args.append(data)
+*extend(data)
+ self.args.extend(data)
+*data
+ データを返す。
+ (self.command.lower(),*self.args)
+*__str__()
+ 文字列にして返す。
+ self.STR_SEQ.join(self.data)
+*__iter__()
+ データをイテレータとして返す。
+ iter(self.data)
+*read(line,seq=re.compile(" +"))	#staticmethod
+-line	:行。データ。
+-seq	:区切り。
+ データを読み込む。seq で区切って読み込む。
+ Query(re.split(seq,line.rstrip())) にほぼ同じ
+*input(prompt=">>",seq=re.compile(" +"))
+-prompt	:読み込むときに表示する文字列
+-seq	:区切り
+ データを標準入力から読み込む。
+ line=input() -> Query.read(line,seq) に同じ。*親クラス
+-BaseTagDB	"0X19kYl9fLkJhc2VUYWdEQg==.csm
+*dumpCSM()
+ カードを CSMにして返す。
+*append(memo,comment,tags,date,override)
+ カードを追加する。
+*searchForTagAsCard(tags)
+ self.searchForTagOnlyCard を __index__.Card 型にして返す。
+ 内部では __index__.SimpleCard として扱ってるのでこういう変換が要る。
+*search(memo,tags)
+ カードを検索する。
+*appendCSM(csm,override)
+ csm をカードとして追加する。
+*appendCSMs(csms,override)
+ appendCSM の複数版。
+*appendDB(dst,memo,tags,override)
+ self.search(memo,tags) で出たカードを dst に追加する。
+*appendCardDB(cardDB,override)
+ CardDB のカードを追加する。
+*clean()
+ すでに削除したカードのデータがデータファイルなどに残るときがある。そういうものをきれいにする。*親クラス
+-TOT_DB		"0X19kYl9fLlRPVF9EQg==.csm
+*変数
+-CARD_FILE	:"card.txt"
+-cards		:カード。インデックス。
+-CardClass-	:カードのクラス。
+*__init__(dname,CardClass=__index__.BaseCard,cardAsBytes=True)
+-CardClass	:カードのクラス
+-cardAsBytes	:カードの読み書きをするときに、バイトとしてか文字列として扱うか。
+*get(cardID)
+ id が cardID のカードを返す。
+*append(override,toIndex={},raw={})
+-override	:上書きするか否か。
+-toIndex	:インデックスに変換して追加するもの。
+-raw		:そのまま追加するもの。
+ データをカードの引数に渡して保存する。例えば、カードが
+ 	Card(memoIdx,commentIdx,date)
+と取り、memoIdx と commentIdx はインデックスに変換して渡してほしいとする。そして date はそのまま渡してほしいとする。そのときは
+	self.append(True,toIndex={"memoIdx":memo,"commentIdx":comment},raw={"date":date})
+とすればいける。辞書のキーはカードの引数の名前でこれに基づいて渡される。
+*searchFunc(card,**data)
+-card	:カード
+-data	:データ
+下記の search のときに返すカードか判定する。searchFunc が真を返せば search において返す。
+ dataは
+	search(toIndex,raw)
+において、toIndex をインデックスに変換する。raw はそのままで、それらを data としてsearchFuncに渡す。
+*search(toIndex={},raw={})
+-toIndex	:インデックスに変換するデータ
+-raw		:そのままのデータ
+ searchFunc で書いたように、toIndex と raw はsearchFuncに渡され、返すか否かを判定する。
+*remove(id_)
+ id が id_ であるカードを追加する。
+*getU()
+ 全集合を返す。実装なし。*親クラス
+-BaseCardDB	"0X19kYl9fLkJhc2VDYXJkREI=.csm
+*変数
+-TAG_FILE	:"tag.txt"
+-tag		:タグのデータ。辞書。
+-cardToTags	:カードからタグの辞書。self.reverseTag() によってつくる。
+ tag はタグのデータである。タグとは、__index__.Tag のことで、タグのインデックスとカードのID を持つ。要するに、タグからカードへの逆引きとも言える。
+*reverseTag()
+ 「カードのID -> タグ」の辞書をつくる。self.tag の逆引きに近い。
+*__searchForTag__(tags)
+ tags からカードを検索する。self.tag を元に検索する。
+*searchForTag(tags)
+ __searchForTag__(tags) から重複するカードをなくしたもの。
+*searchForTagOnlyCard(tags)
+ searchForTag(tags) からカードのみを返す。
+*searchForTagWithTags(tags)
+ searchForTagOnlyCard(tags) からカードとそのタグを返す。タグは self.cardToTags から引く。
+*append(override,tags,toIndex={},raw={})
+ まず BaseCardDB.append(override,toIndex,raw) でカードを追加する。その後、「タグ -> カード」を登録する。
+ *appendTags(id_,tags)
+ ID が id_ であるカードにタグを追加する。
+*__removeTags__(ids,tags)
+ ID が ids のどれかであるカードからタグを削除する。
+*removeTags(id_,tags)
+ ID が id_ であるカードからタグを削除する。
+*cleanTag()
+ カードのないタグを削除する。
+*getTags()
+ すべてのタグを返す。
+*getTagsInTOT()
+ 正真正銘のすべてのタグを返す。
+ getTags()+getTagsInTOT()
+*getU()
+ すべてのタグをインデックスのまま返す。TOTを持つデータベース。
+-#
+*親クラス
+-BaseDB		"0X19kYl9fLkJhc2VEQg==.csm
+*変数
+-TOT_FILE	:TOTにデータのファイル。"tot.txt"
+-tots	:TOT。インデックス。
+*totFile
+ TOTのデータを書き込むファイル。
+ os.path.join(self.dname,self.TOT_FILE)
+*dumpTOT()
+ インデックスの self.tots を データに変換して返す。
+*getTagsInTOT()
+ self.tots のタグ名やそのこどものタグなどを全て返す。
+*getTOT(tag)
+ タグ名が tag である TOT を返す。
+*searchTOT(tag)
+ タグ名が tag と部分一致する TOT を返す。
+*removeTOT(nameIdx)
+ タグ名のインデックスが nameIdx である TOT を返す。
+*appendTOT(name,tags,override=False)
+ タグ名が name タグが tags である TOTを追加する。
+*appendCSM(csm,override=False)
+ csm が TOT なら追加する。
+*appendCSMs(csms,override)
+ appendCSM の複数版。
+*__getTagIdxesRec__(tags,U)
+-tags	:タグ
+-U	:全集合
+ tag から TOT を再帰的にたどってタグを入手し返す。
+*getTagIdxesRec(tags,U)
+ __getTagIdxesRec__(tags,U) に同じ
+*getTagsRec(tags,U)
+ getTagIdxesRec(tags,U) はインデックスを返す。それを文字列にして返す。 サーバーを立てて、直接通信する。ただのテキストのやり取りだから、セキュリティは大丈夫だろう。自作の楽しみというのもあるが、まず良く言えばシンプル、悪く言えば簡素で良い。シンプルだから拡張も簡単である。また大手のソフトは対象の人が多すぎて、中々自分個人の需要とぴったりとは合わない。
+ サーバーを立てるには
+ 	% server start <dbid>
+とすれば立てれる。接続数や読み書きの権限は server.conf で設定できる。あまり個人のパソコンで多数の接続はしない方が良いと思う。
+ server.conf	"0c2VydmVyLmNvbmY=.csm
+ 止めるには
+ 	% server stop <dbid>
+とする。 良く使うが、長いコマンドを略したいときがある。そのときは、alias コマンドを使う。
+ 例えば、 csm write と打つのが面倒なときは
+ 	>>alias dump csm write
+	>>alias d dump
+とすれば、 d と押すだけでいける。詳細はこちらで。 "0c2VsZWN0MiDjga7jgrPjg57jg7Pjg4k=.csm
+ se2_alias.txt に書き込めば、いつどのデータベースでも適用される。
+ もっと特殊なものでも良い。例えば
+ 	>> alias koncyu search -t 昆虫 -m ムシ -p c
+	>> alias k koncyu
+ともできる。単純な置換なので、
+ 	>> alias koncyu search -m ムシ -p c
+	>> alias k koncyu
+	>>k -t 昆虫
+は、「-m」と「-t」が逆になるので出来ない。 カードを追加するには、まず select をする。
+ 	%select main
+とすれば、シェルが開く。そして
+	>>write
+とすれば
+	Memo:
+	Comment:
+	Tags:
+と順に入力をカードを追加する。受け付ける。
+ またカードを編集したいときは。...	"カードを編集する。 後になってカードの内容を変えたいことは良くあると思う。そのために、まずは select2 をする。select でも出来ないことは無いが、select2 の方が格段に楽である。
+ 	% select2 main
+そして
+	>> csm write
+とすると、カードがCSM として吐き出される。そして編集するには VIM を使う。
+	>> vim -t 旅
+とすれば、「旅」タグのカードを VIM で開く。そして編集したら
+	>> csm append --override
+とすれば、データベースのカードの内容が書き換えられる。 カードを追加するには、まず select をする。
+ 	%select main
+とすれば、シェルが開く。そして
+	>>write
+とすれば
+	Memo:
+	Comment:
+	Tags:
+と順に入力をカードを追加する。受け付ける。
+ またカードを編集したいときは。...	"044Kr44O844OJ44KS57eo6ZuG44GZ44KL44CC.csm 後になってカードの内容を変えたいことは良くあると思う。そのために、まずは select2 をする。select でも出来ないことは無いが、select2 の方が格段に楽である。
+ 	% select2 main
+そして
+	>> csm write
+とすると、カードがCSM として吐き出される。そして編集するには VIM を使う。
+	>> vim -t 旅
+とすれば、「旅」タグのカードをすべて VIM で開く。そして編集したら
+	>> csm append --override
+とすれば、データベースのカードの内容が書き換えられる。VIM の使い方 CSMファイルのためのVIMの使い方を説明する。
+*ファイルを開く
+ 「-o」と押すとその行のファイルを開ける。たとえば、
+ 	こんにちは	"XXXXX.csm
+とあるとき、その行で「-o」と押すと、「 XXXXX.csm 」を開く。ディレクトリはそのファイルと同じ。
+*ページをめくる
+ 複数のファイルを同時に開いたとき、ファイルを前後するには、普通
+ 	:next または :n	#次のファイル
+	:Next または :N #前のファイル
+を使う。そこで
+	:next -> 0
+	;Next -> 9
+とした。なのでもっと直感的に出来る。 カードを追加するには、まず select をする。
+ 	%select main
+とすれば、シェルが開く。そして
+	>>write
+とすれば
+	Memo:
+	Comment:
+	Tags:
+と順に入力を受け付ける。
+ またカードを編集したいときは。...	"044Kr44O844OJ44KS57eo6ZuG44GZ44KL44CC.csm 良く使うが、長いコマンドを略したいときがある。そのときは、alias コマンドを使う。
+ 例えば、 csm write と打つのが面倒なときは
+ 	>>alias dump csm write
+	>>alias d dump
+とすれば、 d と押すだけでいける。詳細はこちらで。 "0c2VsZWN0MiDjga7jgrPjg57jg7Pjg4k=.csm:*alias
+ se2_alias.txt に書き込めば、いつどのデータベースでも適用される。
+ もっと特殊なものでも良い。例えば
+ 	>> alias koncyu search -t 昆虫 -m ムシ -p c
+	>> alias k koncyu
+ともできる。単純な置換なので、
+ 	>> alias koncyu search -m ムシ -p c
+	>> alias k koncyu
+	>>k -t 昆虫
+は、「-m」と「-t」が逆になるので出来ない。 select や select2 では一つのデータベースしか扱えない。そこで複数を扱いたいときは、link を使う。
+ link	"0bGluaw==.csm
+ まず
+	$ ln
+と打つと、リンクのシェルが始まる。そして例えば
+	:> append fruit fruit
+とすると、IDが fruit タグが「fruit」のリンクのデータベースがつくられる。リンクのデータベースは普通のデータベースとは区別される。そして
+	:> select fruit
+とすると、fruit に対してシェルを起動する。一見一つしか扱ってないようだが、次に例えば、grape と apple という普通のデータベースがあるとする。そこで
+	>> append grape
+	>> append apple
+とする。詳細は link　のドキュメントで。	"0bGluaw==.csm
+ すると、grape と apple を同時に扱える。
+ 	>> search
+とすれば、どちらのカードも検索されるし
+	>>csm write
+もできる。
+-
+ また util でも複数同時に扱えるコマンドはある。
+ utilのコマンド	"0dXRpbOOBruOCs+ODnuODs+ODiQ==.csm*csm write
+	csm write tot [<tag>] [(-d <dname>)]
+	csm write csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]
+	csm write [(-d <dname>)]
+ カードをCSMとして書き込む。<dname>はディレクトリ名。<dname>が指定されないときは、「%KYODAISHIKI_DB_DIR%\csmFiles」をディレクトリとする。
+ totのとき。<tag>はタグ名で、部分一致したものを書き込む。
+ csmのとき。<tags>はタグ。<memo>はメモ。selectの検索で一致したカードを書き込む。
+ selectの検索。 "0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm:*search
+ その他のときは、標準のホームと同様に書き込む。 "0aG9tZSDjga7jgrPjg57jg7Pjg4k=.csm:*search
+*csm append
+	append tot [<tag>] [(-d <dname>)] [(-O|--override)]
+	append csm [(-t <tags>)] [(-m <memo>)] [(-d <dname>)]  [(-O|--override)]
+	append [(-d <dname>)] [(-O|--override)]
+ CSMをカードとしてデータベースに追加する。上書きするときは、--override をつける。
+ 変数は csm write と同様。
+*csm remove
+	csm remove
+ 「%KYODAISHIKI_DB_DIR%\csmFiles」を削除する。
+*search
+	search  [(-t <tags>)] [(--nt <noTags>)] [(-m <memo>)] [(-c <comment>)] [(-F <from>)] [(-U <until>)] [(-u <userid>)] [(-D <dbid>)] [(-p <pMode>)] [(--pn|--printNot)] [(-r|--random)]
+ カードを検索する。
+ -<tags>:タグ。全一致。
+ -<noTags>:タグ。このタグを含むカードを検索しない。
+ -<memo>:メモ。部分一致。
+ -<comment>:コメント。部分一致。
+ -<from>:日付の最低。この日以降を検索する。
+ -<until>:日付の最高。この日以下を検索する。
+ -<userid>:<userid>のカードを検索する。具体的には、「USERID:<userid>」をタグに追加する。
+ -<dbid>:<dbid>のカードを検索する。具体的には、「DBID:<dbid>」をタグに追加する。
+ -<pMode>:selectと同様。"0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm:<pMode>:
+ - --pn,--printNot:NOTカードも表示する。
+ - -r,--random:カードをランダムに並び替えて表示する。
+*remove
+-
+*append
+*alter
+*grep
+*expand
+*vim ...
+*vlc
+*alias
+	alias <command> <query>...
+	alias (rm|remove) <command>
+ クエリの別名を追加する。
+ 	alias xxx search
+とすれば
+	xxx -t ...
+のようにできる。また
+	alias yyy xxx
+	alias zzz yyy
+などもできる。
+	alias rmt rmove --trush
+のようにもできる。
+ alias remove は別名のコマンドを削除する。
+*selectのコマンド
+ "0c2VsZWN044Gu44Kz44Oe44Oz44OJ.csm CSMファイルのためのVIMの使い方を説明する。
+*ファイルを開く
+ 「-o」と押すとその行のファイルを開ける。たとえば、
+ 	こんにちは	"0VklNIOOBruS9v+OBhOaWuQ==.csm
+とあるとき、その行で「-o」と押すと、「 0VklNIOOBruS9v+OBhOaWuQ==.csm 」を開く。ディレクトリはそのファイルと同じ。
+*ページをめくる
+ 複数のファイルを同時に開いたとき、ファイルを前後するには、普通
+ 	:next または :n	#次のファイル
+	:Next または :N #前のファイル
+を使う。そこで
+	:next -> 0
+	;Next -> 9
+とした。なのでもっと直感的に出来る。 ファイルは木構造上にある。そしてファイルを分類するときは、その関連のディレクトリに入れて、そしてそのディレクトリをまた関連のディレクトリに入れて、,,, とする。勿論それは素晴らしいし、用も足りる。しかしあるものは沢山の集合に属する。例えば、あるAVが名作であるとする。そのときは、「AV -> 名作 -> ファイル」とすれば良い。しかし「AV -> ファイル」「名作 -> ファイル」としたいときもあるのではないか。また、女優単位でディレクトリを作るとする。そのとき、ある AV に複数の人が出てたらどれに入れるか。これは些細な問題だが、要するに、あるものは沢山の集合に属するということである。
+ 一案として、リンクを保存するというのはあるかもしれない。しかし一々作るのは面倒だし、美しいとも思えない。
+ そのときにこの京大式カードを活用するのはどうだろうか。__file__ シェルを使えば、ファイルのカードを作り、簡単にタグ付け出来る。そしてコメントも書ける。
+ まず例えば
+ 	% append AV av file DNAME:%USERPROFILE%\videos\av
+とする。「DNAME:...」は後で使う。そして
+	% du __file__ av
+としシェルを起動する。次に
+	>> append dir --depth 3
+とすれば、「DNAME:<dname>」の <dname> のファイルをカードにする。--depth は深さで、0ならその直下のファイルだけを扱う。「-d <dname>」とすれば、こちらが優先される。
+ ファイルのカードは、メモにファイル名、タグに「DNAME:<dname>」とそのディレクトリが書かれる。
+ そしてタグを付ければ、一つのファイルを色々なものに属しているとみなせる。一々付けるのは面倒だが、
+	>>append tag -t DNAME:<dname> <tags>...
+ と、ディレクトリ単位で付けたり、メモを元に工夫して付ければ良いと思う。
+ 	>> append tag -t DNAME:%USERPROFILE%\videos\av 名作
+とすれば、AV を「名作」として扱える。
+	>>vlc -t 名作
+などとすれば、タグを元にまとめて開ける。
+ また
+	>> vim filecard -t 名作
+とすれば、そのファイルをまとめて開ける。(普通に「vim -t 名作」とやるとカードを開く。)早く検索するコツ カードの数が増えると検索が遅くなってくる。2000枚を超えてくるとイライラしてくる。結局プログラムの出来が悪いのだが、検索を工夫すれば早くなるのでここに書こうと思う。
+*タグを指定する
+ すこし細かいことを言えば、検索のとき内部では、まずタグで検索し、その後メモで検索する。そして、タグの検索は早いが、メモは遅い。つまり、タグで絞れば絞るほど検索は早くなる。タグの属性など タグは基本的に名詞である。「暑い国」を「国&&暑い」とすると「国」であり「暑い」であるとなりおかしいが、「暑い国」のままでは悔しい。そこで例えば「%A」を「Aのもの」とすれば「国&&%暑い」とできる。これは「国&&暑いもの」や「」国&&暑い場所」でも十分だが、例えば「Aに関するもの」を「:A」や「Aのなかにあるもの」を「<A」とすれば便利かもしれない。これは結局名詞の言いかえに過ぎないから、とりあえず提案してみる。未整理DBID:京大式カードのドキュメントタグの提案 URL 面白いサイトを紹介したい場合、まずカードのメモにコメント、コメントにURLを張り、タグにタイトルを付ける。すると検索するときに「-p mc」とすると
+ 	コメント
+	  URL
+ 	コメント
+	  URL
+	   :
+	   :
+となり、「-p ct」とすると
+	  URL
+	タイトル
+	  URL
+	タイトル
+	   :
+	   :
+なり、中々見易いと思う。例えば、xvideosの動画に関するものを見たいときは「-t xvideos,url」とすれば良くなる。
+ URLの他にコメントを付けても良いが、あまりない方が見易いか。タグの提案 USERあるまとまりのユーザーの一覧のカードのタグに「USER」と付ければ、一気にユーザーの一覧が取れる。そしてそのクローラーのDBからも拡散されて、ある程度選択されながら拡散される。レビューは本サイトで出来るので、暇な人は一覧から吟味してレビューし、普通の人はレビューの点の高い人を選べばよいと思う。 タグの提案 サイトやはり本プログラムの本質は「いかに検索するか」であり、ゴミばかりのネット空間からいかに玉を選び取るかである。そしてサイトの良悪は気になるだろう。レビューはほかのサイトに任せるとし、本プログラムは細かい情報の共有の手助けをしたい。そこでサイトに関する情報はタグに「サイト」と付ける。そして例えばAVのサイトに関する情報について調べたい時は、「s -t サイト,AV」とする。サイト名はタグに付けておく。xvideosの情報については「s -t xvideos」とすれば十分でだろう。 提案TOTのみを配りたい場合はデータベースのタグに「TOT」と付ければ良い。サイトのドキュメントでは、それぞれの説明を分類して、そのタイトルを検索できるようにすれば良いか。*データの出し入れが重いとき
+.......
+みたいなのを、「データ 重い」で検索したりとか。環境変数:KYODAISHIKI_LOADER_DIR,KYODAISHIKI_HOME_DIR,KYODAISHIKI_DB_DIR拡張のホームシェルにはパイプがある。入出力select2には全てのシェルに適用される $HOMEDB$\se2_enter.bat がある。ENTERselect2のVIMVIMコマンドは
+	vim <memo> [(-d <dname>)]
+	vim file <fname>
+という形式をとる。ファイルを開く場合に file が必要なのは遠回りだがメモで開くことを想定している。
+ <dname>はメモのディレクトリ名であり、デフォルトは csm write や csm append のデフォルトと同じである。
+ 例えば、「VIM万歳!!!」というカードがあったとき
+ 	csm write
+	vim VIM万歳!!!
+とやれば、そのカードを開ける。re.search を使ってるので他に一致するものがなければ
+	vim VIM
+で開けるし
+	vim ^VIM万歳!!!^
+とやれば確実ではある。
+ 一々打たずとも「s ...」の検索結果からコピペすれば良いと思う。select2のappend append は
+ 	append tag [(-t <tags>)] [(-m <memo>)] <tagsToAppend>...
+	append line <memo> <line>	
+となっている。
+ append tag は 検索されたカードに <tagsToAppend>を追加する。「xvideos万歳!!!」というカードがあったとき
+ 	append tag -m xvideos万歳 xvideos 万歳 エロ
+とすれば、そのカードに「xvideos,万歳,エロ」というカードが追加される。
+ append line は <memo> で検索されたカードのコメントの最後の行に <line> を追加する。APPENDselect2のsearch標準の select の searchコマンドは
+	search  [(-t <tags>)] [(-m <memo>)] [(-p <pMode>)]
+とシンプルだが、select2のものは
+	search  [(-t <tags>)] [(--nt <noTags>)] [(-m <memo>)] [(-c <comment>)] [(-F <from>)] [(-U <until>)] [(-u <userid>)] [(-D <dbid>)] [(-p <pMode>)] [(--pn|--printNot)] [(-r|--random)]
+と賑やかになる。標準はとにかくシンプルにしたいが、拡張は色々作って、嫌なら使わなければ良いという発想である。
+ <noTags>は<tags>から<noTags>を除外する。例えば
+ 	TOT : XXX -> 日本,アメリカ	とし
+	search -t XXX --nt 日本
+とすると 「XXX,日本,アメリカ」-> 「XXX,アメリカ」 となり XXX または アメリカ のタグをもつものだけが検索される。これは TOT と組み合わせると使えると思う。
+ <comment>はコメントから検索する。
+ <from>,<until>は日付によって検索する。
+ 	search -F 2020-01-01 -U 2020-02-28
+とすれば、2020年1月1日から2020年2月28日の間のカードを検索する。
+ <userid> は USERID:<userid> としてタグに追加される。 crawl などの形式に合わせている。
+ <dbid> は DBID:<dbid> としてタグに追加される。こちらも crawl などの形式に合わせている。
+ --printNot は NOTカードを表示する。普通は表示されないようになっている。つまりNOTカードを見たい場合は
+ 	search -t __NOT__ --printNot
+とすれば良い。__NOT__ と打つのは嫌だが、仕方ない。
+ --random はランダムにカードを並び替える。標準は日付の新しい順になっている。SEARCHNOTカードについてNOTカードとはタグに __NOT__ があるものである。これは通常の検索時に出力されない。(--pnまたは--printNottpすれば出力される。)カードは残しときたいが、視界に入れたくないときに便利だと思う。例えば、「中国は素晴らしい。」というカードを作ったが、後になってそうではないと思った時や、僕は京大式カードで作りたい機能をメモして、作ったらNOTカードにしている。
+ NOTカードにするには alter コマンドを使う。
+ 	alter [(-t <tags>)] [(-m <memo>)]
+ 普通のカードをNOTカードにし、NOTカードは普通のカードにする。(要するに反転させる)ALTERカードを扱う技術 カードは各々自由に扱えば良いが、デタラメにやるよりはある程度のノウハウはある方が良いだろう。ボクが今試しているやり方を皆さんに共有したい。
+*カードの書き方に関するメモは「知的生産メモ」のタグをつける。
+いろいろやってると、ある種類のカードには、決まったタグを付けたり、メモの書式を統一したい場合もあるだろう。そういう時はそれをメモして「知的生産メモ」のタグを付ける。例えば、ユーチューブに関するメモに「youtube_memo」と付けたいなら
+	メモ:ユーチューブに関するメモは「youtube_memo」と付ける。
+	コメント:
+	タグ:知的生産メモ
+とかく。これは単純だが、複雑だったり数が増えたときはメモしないと忘れる。ボクは百科事典をしおりにするときに、項目名を「TERM:<項目名>」としているが、こういうのが増えるとメモしないと成立しない。
+*本からの引用はしおりとして書く。
+ 本を読んで、いい言葉に出会うとついメモしたくなる。そして、ついその文と適当なタグだけでカードを作ってしまう。しかし後で、「誰が言ったか」「どこに書いてあったか」を思い出したいときもあるし、なによりその文は前後の内容と密接に関係しているのであり、それだけを抜き出しても仕方ないところはある。
+ そのときは、しおりとして書くのである。形式は何でも良いだろうが、本用のシェルを一応作ったので、今回はそれに合わせて
+ 	メモ:カードはくりかえしくることが大切である。
+	コメント:
+	タグ:しおり,TITLE:梅棹忠夫著作集11,SUBTITLE:知的生産の技術,P_L:52_14
+とする。まず「しおり」は本のシェルでこれをしおりとして扱うため、あとは「TITLE:<タイトル>」「P_L:52_14」となる。「SUBTITLE:<サブタイトル>」はおまけのようなものである。こうすれば、後で思い出したらこれを手がかりに前後の文と共に読み返せばよいと思う。本は買えば良いし、図書館にはある。
+ いちいち、TITLE:... と書くのは面倒である。本のシェルを使えば
+ 	$ w shiori -t SUBTITLE:知的生産の技術 -T 梅棹忠夫著作集11
+	$ P:...
+	$ L:...
+	$ Memo:...
+	$ Tag:...
+となり、タグを入力せずとも、サブタイトル以外はいける。連続で書く場合は便利だと思う。
+ とにかく、タイトルとページぐらいは書いた方が良い。
+*カードをコメントでつなげる。
+　カードをがむしゃらにつくると、ちゃんとタグ付けすれば有機的に使えるが、点として扱うより、流れとして扱った方がすっきりして良い。梅棹忠夫も「それぞれのカードのつながりをまたカードにする。」と言っている。
+　流れにする場合、まず梅棹忠夫の言うように、流れのカードを新しくつくるのが思いつく。たしかにこれも良いが、コンピュータはカードのサイズが自由である。「流れ」をカードの中に含めれたら便利ではないか。例えば、コメントにカードのリンクを張る。VIMのショートカットで開けるようにすれば、次から次へのたどっていける。例えば、
+-
+	カードをつなげばルートになり理論になる。
+-
+-
+-
+	DBID:MAIN,京大式カード,知的生産メモ
+-
+というのがあり、
+-
+	理論とはルートか。
+-
+	理論が違うということはルートが違うということ。
+	カードをつなげば理論になる。  "044Kr44O844OJ44KS44Gk44Gq44GS44Gw44Or44O844OI44Gr.csm
+-
+	DBID:MAIN,論理,思考,理論
+-
+とすれば、「理論とはルートか。」から「カードをつなげば理論になる。」をたどれる。つまり流れができる。これを繰り返したり、一つからの枝を増やせば中々使えると思う。
+*その他
+ 他にも細かいが、一応ルールを決めてみている。
+-
+-読みたい本に関することは「読みたい」を付ける。
+-良いと思った本には「良」をタグに付ける。
+-再読したい本は「再読」と付ける。
+-カードを多用した考察には「考察」と付ける。
+-
+各々のタグに応じてシェルをつくっても面白いと思う。-loader.conf #PATH:<path> #<homeid>:<module_name>
+-server.conf #chmod [-]rw <fname>,...
+-enter.bat #<query>
+-exit.bat
+-alias.txt #<command> <query>
+-*select2
+--se2_enter.bat
+--se2_exit.bat
+--se2_alias.txtlinkについてlink はクエリを持ち、クエリは
+	<dbid> -t <tags> -m <memo>
+で表される。
+ 「*」は全データベースの全検索である。
+ 	* -t XXX
+ とすると、全データベースのXXXタグのカードが検索される。要するにデータベースのリンクである。
+ リンクはクエリのデータベースだが、シェル上ではカードのデータベースのような挙動にしてるので細かいことは気にしなくて良い!
+ ホームは
+ 	append <linkid> <tags>...
+	select <linkid> [(-u <userid>)]
+	crawl
+	server ...
+ののコマンドを持つ。
+ append はリンクを追加する。<tags>はリンクのタグでまだクエリを追加してないので使い物にならない。
+ select はデータベース同様にシェルを開く。後述するようにサーバーを立てれるので、<userid>を指定すれば、そのユーザーのリンクへの接続を試みる。
+ 存在しない<linkid>を選択したときは、「* -t <linkid>」のクエリを持つ一時リンクを開く。シェルを抜けると削除される。
+ crawl はリンクをクロールする。元のcrwal と殆どつくりは同じである。
+ server はリンクのサーバーを立てる。ホームの server と同じつくりである。
+ --
+  リンクのシェルは
+  	ls
+	append <dbid> [(-m <memo>)] [(-t <tags>)]
+	search [(-m <memo>)] [(-t <tags>)] [(-D <dbid>)] [(-p <pMode>)]
+	remove <dbid> [(-m <memo>)] [(-t <tags>)]
+	csm write [(-d <dname>)]
+	csm search [(-m <memo>)] [(-t <tags>)] [(-d <dname>)]
+	dump
+をのコマンドを持つ。大体データベースのシェルと同じである。
+ ls はクエリの一覧を表示する。
+ append は 「<dbid> -t <tags> -m <memo>」のクエリを追加する。そして remove で削除する。
+ -
+ ホームは {HomeDir}\link である。utilのCategoryクラスCategoryクラスは タイトルと cols(行)と childs(子ども)を持つ。文を read 関数系 (read,readf)で解析して作る。例えば
+-
+s="""
+*AVサイト
+-サイトそれぞれに得意がある。
+-*xvideos
+--洋物
+--派手
+-*pornhub
+--シュッとした洋物
+--グローバル
+*youtube
+-まともなもの全て
+*dailymotion
+-転載
+-ドラマ
+"""
+とし,
+	Category.read(s) 
+とすると、イテレータとして 、
+	<title> <cols>
+	<parent_title>-><title> <cols>
+	 	:
+		:
+とすれば、(------------- の区切りは別のオブジェクト)
+	AVサイト サイトそれぞれにに得意がある。
+	AVサイト->xvideos 洋物,派手
+	AVサイト->pornhub  シュッとした洋物,グローバル
+	---------------------------------------------
+	youtube まともなもの全て
+	---------------------------------------------
+	dailymotion 転載,ドラマ
+となる。つまり「*...」がタイトルでその下の「-...」がその行、その行のタイトルは子供のタイトルで、1つ「-」が増えると子供の行になる。タイトルの前の「-」と、行の1つ以外の「-」を深さとするとわかりやすい。CATEGORYBaseShell3は alias.txt を持つ。SHIORITITLEしおりのタイトル。「write shiori -T <title>」のタイトルが指定されなかった場合、これがタイトルになる。シェルの環境変数。BOOKRBTAGSじてんのタグ。「w jiten -t <tags>」の<tags>に追加される。シェルの環境変数。RB.JITENREFERENCE_BOOKファイルカード__file__　のシェルで扱うカード。タグに「IS_FILE」が付く。本カード本のカード。メモに本のタイトル。タグに「SAW」または「READ」を付ける。しおりカードしおりのカード。タグに「IS_SHIORI」が付く。レビューカードレビューのカード。タグに「review」が付く。__file__　のシェルで扱うカード。タグに「IS_FILE」が付く。メモにファイル名。BOOKTAGS本のタグ。「write book -t <tags>」の<tags>に追加される。シェルの環境変数。「csm append」が遅いとき。カードが多くなってくると「csm append」が遅くなってくる。特に「csm append --override」はカードが3000枚を超えてくると使い物にならない。これはプログラムが悪いのだが、早く使うコツをここに記す。
+ カードを追加するのは少しコストがかかる。枚数が増えると、比例的に大変にある。逆に時間がかかるのは、枚数が多いからだと言える。それなら枚数を減らせばよい。
+ まず
+ 	>> csm write
+とする。そして例えば
+	>> vim -t 旅
+などのようにカードを開き編集する。このとき、カードを追加するのはタグが「旅」のものだけで良いはずである。それなら
+	>> csm append csm -t 旅
+とすれば、タグが「旅」のカードだけ追加される。部分的で枚数が少ないからコストもかからない。それでもコストがかかるなら
+	>> csm append csm -t 旅,アフリカ
+や	
+	>> csm append csm -t 旅 -m アフリカを旅するときの注意
+などのように絞っていけば良い。カードが多くなってくると「csm append」が遅くなってくる。特に「csm append --override」はカードが3000枚を超えてくると使い物にならない。これはプログラムが悪いのだが、早く使うコツをここに記す。
+ カードを追加するのは少しコストがかかる。枚数が増えると、比例的に大変にある。逆に時間がかかるのは、枚数が多いからだと言える。それなら枚数を減らせばよい。
+ まず
+ 	>> csm write
+とする。そして例えば
+	>> vim -t 旅
+などのようにカードを開き編集する。このとき、カードを追加するのはタグが「旅」のものだけで良いはずである。それなら
+	>> csm append csm -t 旅
+とすれば、タグが「旅」のカードだけ追加される。部分的で枚数が少ないからコストもかからない。それでもコストがかかるなら
+	>> csm append csm -t 旅,アフリカ
+や	
+	>> csm append csm -t 旅 -m アフリカを旅するときの注意
+などのように絞っていけば良い。.....csm append edit編集して追加する。すでにデータベースにあるものだけ追加する。速い。csm append --editカードが多くなってくると「csm append」が遅くなってくる。特に「csm append --override」はカードが3000枚を超えてくると使い物にならない。これはプログラムが悪いのだが、早く使うコツをここに記す。
+ カードを追加するのは少しコストがかかる。枚数が増えると、比例的に大変にある。逆に時間がかかるのは、枚数が多いからだと言える。それなら枚数を減らせばよい。
+ まず
+ 	>> csm write
+とする。そして例えば
+	>> vim -t 旅
+などのようにカードを開き編集する。このとき、カードを追加するのはタグが「旅」のものだけで良いはずである。それなら
+	>> csm append csm -t 旅
+とすれば、タグが「旅」のカードだけ追加される。部分的で枚数が少ないからコストもかからない。それでもコストがかかるなら
+	>> csm append csm -t 旅,アフリカ
+や	
+	>> csm append csm -t 旅 -m アフリカを旅するときの注意
+などのように絞っていけば良い。
+ また「--edit」を付けるとさらに速くなる。
+ 	>> csm append csm --edit -t 旅
+とする。「--edit」はすでにデータベースにあるメモしか追加できないので、メモを編集したら使えない。KYODAISHIKI_LOADER_HOMEローダーのディレクトリ名。環境変数。事前にセットされれば、それをローダーのディレクトリする。データベースがおかしい データベースがおかしくなるときがある。
+*コメントの改行
+ csmファイルでは改行2つをデータの区切りとする。なので、もしコメントに改行2つがあると、上をコメント、下をタグとしてしまい、おかしい。こうなると、タグが日付になってしまう。するとカードを上手く認識できなくなって検索できなくなる。
+ とりあえず、治すには card.txt の、タグが日付のところを治せばよい。元の日付がわからないなら適当にするしかない。wwwwwww CSMファイルのためのVIMの使い方を説明する。
+*ファイルを開く
+ 「-o」と押すとその行のファイルを開ける。たとえば、
+ 	こんにちは	"1363020311.csm
+とあるとき、その行で「-o」と押すと、「 1363020311.csm 」を開く。ディレクトリはそのファイルと同じ。
+*ページをめくる
+ 複数のファイルを同時に開いたとき、ファイルを前後するには、普通
+ 	:next または :n	#次のファイル
+	:Next または :N #前のファイル
+を使う。そこで
+	:next -> 0
+	;Next -> 9
+とした。なのでもっと直感的に出来る。 ードを追加する。 カードを追加するには、まず select をする。
+ 	%select main
+とすれば、シェルが開く。そして
+	>>write
+とすれば
+	Memo:
+	Comment:
+	Tags:
+と順に入力を受け付ける。
+ またカードを編集したいときは。...	"87953979.csm サーバーを立てて、直接通信する。ただのテキストのやり取りだから、セキュリティは大丈夫だろう。自作の楽しみというのもあるが、まず良く言えばシンプル、悪く言えば簡素で良い。シンプルだから拡張も簡単である。また大手のソフトは対象の人が多すぎて、中々自分個人の需要とぴったりとは合わない。
+ サーバーを立てるには
+ 	% server start <dbid>
+とすれば立てれる。接続数や読み書きの権限は server.conf で設定できる。あまり個人のパソコンで多数の接続はしない方が良いと思う。
+ server.conf	"454034540.csm
+ 止めるには
+ 	% server stop <dbid>
+とする。 良く使うが、長いコマンドを略したいときがある。そのときは、alias コマンドを使う。
+ 例えば、 csm write と打つのが面倒なときは
+ 	>>alias dump csm write
+	>>alias d dump
+とすれば、 d と押すだけでいける。詳細はこちらで。 "2355105033.csm:*alias
+ se2_alias.txt に書き込めば、いつどのデータベースでも適用される。
+ もっと特殊なものでも良い。例えば
+ 	>> alias koncyu search -t 昆虫 -m ムシ -p c
+	>> alias k koncyu
+ともできる。単純な置換なので、
+ 	>> alias koncyu search -m ムシ -p c
+	>> alias k koncyu
+	>>k -t 昆虫
+は、「-m」と「-t」が逆になるので出来ない。 select や select2 では一つのデータベースしか扱えない。そこで複数を扱いたいときは、link を使う。
+ link	"70648239.csm
+ まず
+	$ ln
+と打つと、リンクのシェルが始まる。そして例えば
+	:> append fruit fruit
+とすると、IDが fruit タグが「fruit」のリンクのデータベースがつくられる。リンクのデータベースは普通のデータベースとは区別される。そして
+	:> select fruit
+とすると、fruit に対してシェルを起動する。一見一つしか扱ってないようだが、次に例えば、grape と apple という普通のデータベースがあるとする。そこで
+	>> append grape
+	>> append apple
+とする。詳細は link　のドキュメントで。	"70648239.csm
+ すると、grape と apple を同時に扱える。
+ 	>> search
+とすれば、どちらのカードも検索されるし
+	>>csm write
+もできる。
+-
+ また util でも複数同時に扱えるコマンドはある。
+ utilのコマンド	"1918241781.csmデータを消さないために使用法HOW うっかり、カードやデータベースを全て消してしまう時はある。また、バグで失くなってしまうこともある。消してしまったなら、後はリカバリーソフトに託すしかない。しかしバックアップを取っていれば被害を少なくできる。
+*普通にコピーする
+ まずは、原始的だがファイルをコピーすれば良い。手動でも良いし、定期的に自動でとっても良い。結局バックアップとはコピーだから、これ以上のものはないだろう。
+*util backup を使う
+	 コマンド:"1918241781.csm:*backup
+ このコマンドでバックアップできる。手動でやった方が、データの良し悪しの区別がついて良いと思う。定期的に、
+ 	u bu .+
+と打っておけば安心である。
+*dump　する
+	 コマンド:"1918241781.csm:*dump
+これはそのままコピーではなく、カードに変換して吐き出す。良いところ、は見栄えが良い気がする。。。検索のときの記号- && : A&&B -> AとBの共通のタグ。TOT。
+- || : A||B -> AまたはBのタグ。TOT。
+- ,  : A,B  -> AとB を含むカード。
+- +  : A+B -> AかBを含むカード。SHIORITAGSしおりのタグ。

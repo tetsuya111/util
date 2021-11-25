@@ -1,0 +1,15 @@
+se2 select2
+u util
+ln link
+pf __profile__
+site __site__
+du dbutil
+bse dbutil shells.book select
+jse du shells.reference_book
+fse du shells._file
+rese du shells.review
+cs se2 ’m“I¶Yƒƒ‚
+snm __selenium__
+segui select2_gui
+se3 select3
+xse du shells._xvideos

@@ -1,0 +1,11 @@
+shi shiori
+sh shiori
+user userid
+ui userid
+b book
+dr diary
+rb reference_book
+jiten rb
+file __file__
+ca category
+ca shells.category

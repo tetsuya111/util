@@ -1,0 +1,18 @@
+dump csm write
+d dump
+dd csm write
+admit csm append --override
+ad admit
+admitcsm csm append csm --edit --override
+adc admitcsm
+admittot csm append tot --edit --override
+adt admittot
+at append tag
+rt remove tag
+rmt remove --trush
+tag list tag
+t tag
+tot list tot
+ww write word
+admedia a dir -f "(.+m4a)|(.+mp4)"
+adm admedia
