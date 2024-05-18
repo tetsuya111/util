@@ -1,0 +1,63 @@
+VIM - Vi IMproved 8.2 (2019 Dec 12, compiled Dec 12 2019 13:19:27)
+
+使用法: vim [引数] [ファイル..]    あるファイルを編集する
+   もしくは: vim [引数] -               標準入力からテキストを読込む
+   もしくは: vim [引数] -t タグ         タグが定義されたところから編集する
+   もしくは: vim [引数] -q [errorfile]  最初のエラーで編集する
+
+引数:
+   --			このあとにはファイル名だけ
+   --literal		ワイルドカードを展開しない
+   -v			Viモード ("vi" と同じ)
+   -e			Exモード ("ex" と同じ)
+   -E			改良Exモード
+   -s			サイレント(バッチ)モード ("ex" 専用)
+   -d			差分モード ("vidiff" と同じ)
+   -y			イージーモード ("evim" と同じ、モード無)
+   -R			読込専用モード ("view" と同じ)
+   -Z			制限モード ("rvim" と同じ)
+   -m			変更 (ファイル保存時) をできないようにする
+   -M			テキストの編集を行なえないようにする
+   -b			バイナリモード
+   -l			Lispモード
+   -C			Vi互換モード: 'compatible'
+   -N			Vi非互換モード: 'nocompatible
+   -V[N][fname]		ログ出力設定 [レベル N] [ログファイル名 fname]
+   -D			デバッグモード
+   -n			スワップファイルを使用せずメモリだけ
+   -r			スワップファイルを列挙し終了
+   -r (ファイル名)	クラッシュしたセッションを復帰
+   -L			-rと同じ
+   -A			アラビア語モードで起動する
+   -H			ヘブライ語モードで起動する
+   -T <terminal>	端末を <terminal> に設定する
+   --not-a-term		入出力が端末でないとの警告をスキップする
+   --ttyfail		入出力が端末でなければ終了する
+   -u <vimrc>		.vimrcの代わりに <vimrc> を使う
+   --noplugin		プラグインスクリプトをロードしない
+   -p[N]		N 個タブページを開く(省略値: ファイルにつき1個)
+   -o[N]		N 個ウィンドウを開く(省略値: ファイルにつき1個)
+   -O[N]		-oと同じだが垂直分割
+   +			ファイルの最後からはじめる
+   +<lnum>		<lnum> 行からはじめる
+   --cmd <command>	vimrcをロードする前に <command> を実行する
+   -c <command>		最初のファイルをロード後 <command> を実行する
+   -S <session>		最初のファイルをロード後ファイル <session> を取込む
+   -s <scriptin>	ファイル <scriptin> からノーマルコマンドを読込む
+   -w <scriptout>	入力した全コマンドをファイル <scriptout> に追加する
+   -W <scriptout>	入力した全コマンドをファイル <scriptout> に保存する
+   -x			暗号化されたファイルを編集する
+   --remote <files>	可能ならばVimサーバーで <files> を編集する
+   --remote-silent <files>  同上、サーバーが無くても警告文を出力しない
+   --remote-wait <files>  --remote後 ファイルの編集が終わるのを待つ
+   --remote-wait-silent <files>  同上、サーバーが無くても警告文を出力しない
+   --remote-tab[-wait][-silent] <files>  --remoteでファイル1つにつき1つのタブページを開く
+   --remote-send <keys>	Vimサーバーに <keys> を送信して終了する
+   --remote-expr <expr>	サーバーで <expr> を実行して結果を表示する
+   --serverlist		Vimサーバー名の一覧を表示して終了する
+   --servername <name>	Vimサーバー <name> に送信/名前設定する
+   --startuptime <file>	起動にかかった時間の詳細を <file> へ出力する
+   -i <viminfo>		.viminfoの代わりに <viminfo> を使う
+   --clean		'nocompatible'、Vimの既定、プラグインなし、viminfoなし
+   -h  or  --help	ヘルプ(このメッセージ)を表示し終了する
+   --version		バージョン情報を表示し終了する
